@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Import the PPT template packs and authoring skill from a dsh-desktop checkout.
+ * Import the PPT template packs from a dsh-desktop checkout.
  *
  *   node scripts/import-ppt-templates.mjs --from /path/to/dsh-desktop
  *
@@ -8,15 +8,17 @@
  * generators; sharp, jsdom, pptxgenjs, fflate, saxes, zod and
  * @aiden0z/pptx-renderer for the preview renderer). The script:
  * 1. runs the checkout's three template generators into a temporary directory;
- * 2. copies each pack's metadata, design notes and PPTD sources (en + zh);
+ * 2. copies each pack's metadata, design notes and PPTD sources (en + zh) into
+ *    skills/dsh-ppt/assets/templates, where the skill's pptd.py reads them;
  * 3. renders every Chinese example page to a JPG preview;
  * 4. writes ppt/catalog.json, the file the DSH plugin reads at runtime;
- * 5. refreshes licenses, notices and skills/dsh-ppt.
+ * 5. refreshes licenses and notices.
  *
- * The PPT output is plain data; only the standard SKILL.md is executable guidance.
+ * skills/dsh-ppt itself (SKILL.md, references, scripts) is maintained in this
+ * repository: dsh-desktop's copy targets Desktop-only tools and is not imported.
  */
 import { spawnSync } from 'node:child_process'
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { cpSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
@@ -30,6 +32,7 @@ if (fromIndex < 0 || process.argv[fromIndex + 1] === undefined) {
 }
 const source = resolve(process.argv[fromIndex + 1])
 const output = resolve(root, 'ppt')
+const templateOutput = resolve(root, 'skills/dsh-ppt/assets/templates')
 
 /** Preview width in pixels (reference pages are 16:9). */
 const PREVIEW_WIDTH = 720
@@ -81,8 +84,9 @@ try {
   const { runCli } = await import(pathToFileURL(join(source, 'packages/ppt-runtime/core/lib/bin.js')).href)
   const sharp = createRequire(join(source, 'package.json'))('sharp')
 
-  rmSync(output, { recursive: true, force: true })
-  mkdirSync(join(output, 'templates'), { recursive: true })
+  rmSync(join(output, 'previews'), { recursive: true, force: true })
+  rmSync(templateOutput, { recursive: true, force: true })
+  mkdirSync(templateOutput, { recursive: true })
   mkdirSync(join(output, 'previews'), { recursive: true })
 
   const entries = []
@@ -95,7 +99,7 @@ try {
       if (display === undefined) throw new Error(`模板 ${definition.id} 缺少中文展示文案，请补充 DISPLAY`)
       if (!CATEGORY_ORDER.includes(definition.category)) throw new Error(`模板 ${definition.id} 的分类 ${definition.category} 未知`)
 
-      const target = join(output, 'templates', definition.id)
+      const target = join(templateOutput, definition.id)
       for (const item of ['metadata.json', 'design.md', 'source', 'source-zh']) cpSync(join(pack, item), join(target, item), { recursive: true })
 
       // Render the Chinese example: the plugin's users read Chinese first.
@@ -137,17 +141,13 @@ try {
     templates: entries,
   }, null, 2)}\n`)
 
-  // Licenses, notices and the DSH-compatible authoring Skill.
+  // Licenses and notices.
   const core = join(source, 'packages/ppt-runtime/core')
   mkdirSync(join(output, 'licenses'), { recursive: true })
   cpSync(join(source, 'LICENSE'), join(output, 'licenses/dsh-desktop.LICENSE'))
   cpSync(join(source, 'packages/ppt-runtime/upstream/zara/LICENSE'), join(output, 'licenses/zara-beautiful-html-templates.LICENSE'))
   cpSync(join(source, 'packages/ppt-runtime/upstream/html-anything/LICENSE'), join(output, 'licenses/html-anything.LICENSE'))
   cpSync(join(core, 'THIRD_PARTY_NOTICES.md'), join(output, 'THIRD_PARTY_NOTICES.md'))
-  const skillOutput = join(root, 'skills/dsh-ppt')
-  rmSync(skillOutput, { recursive: true, force: true })
-  cpSync(join(core, 'skills/dsh-ppt'), skillOutput, { recursive: true })
-  if (!existsSync(join(skillOutput, 'SKILL.md'))) throw new Error('缺少 dsh-ppt SKILL.md')
   console.log(`\n[dsh-skills] 已导入 ${entries.length} 套模板到 ${output}（来源提交 ${revision}）`)
 } finally {
   rmSync(scratch, { recursive: true, force: true })

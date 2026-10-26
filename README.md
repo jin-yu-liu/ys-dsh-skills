@@ -2,7 +2,7 @@
 
 面向 [DeepSeek Harness（DSH）](https://github.com/deepseek-ai/deepseek-harness) 的社区技能目录。仓库同时遵循开放的 [Agent Skills 规范](https://agentskills.io/specification)：每个可用技能都是一个以 `SKILL.md` 为入口的独立目录，详细资料和资源按需加载。
 
-本仓库的 `catalog.json` 供 `dsh-leap` 插件发现技能；DSH 也可以直接把 `skills/` 配置为本地技能目录。当前已收录 `dsh-ppt`，并保存插件原有的 16 套 PPT 模板、双语 PPTD 源工程和预览图。
+本仓库的 `catalog.json` 供 `dsh-leap` 插件发现技能；DSH 也可以直接把 `skills/` 配置为本地技能目录。当前已收录 `dsh-ppt`：技能自带 16 套双语 PPTD 模板和 `scripts/pptd.py`（检查 + 导出可编辑 PPTX），只依赖 DSH 内置 Python；`ppt/` 保存插件模板选择器用的目录和预览图。
 
 ## 目录结构
 
@@ -13,12 +13,15 @@ skills/<skill-name>/
   references/                可选：按需读取的说明
   scripts/                   可选：可审查、可复现的辅助脚本
   assets/                    可选：模板等静态资源
+skills/dsh-ppt/
+  scripts/pptd.py            PPTD 工程：templates / show / new / inspect / check / render
+  scripts/_vendor/           随附的纯 Python PyYAML（DSH 内置 Python 不含 YAML 解析器）
+  assets/templates/<id>/     元数据、设计说明、英文/中文 PPTD 源工程
 ppt/
-  catalog.json               PPT 模板索引
-  templates/<template-id>/   元数据、设计说明、英文/中文 PPTD
+  catalog.json               插件模板选择器读取的索引
   previews/<template-id>/    与页码对应的 JPG 预览
   licenses/                  上游许可证
-scripts/validate.mjs         零依赖结构检查
+scripts/validate.mjs         结构检查；有 python3 时用 pptd.py 检查全部模板
 ```
 
 ## Skill 收录规则
@@ -53,11 +56,11 @@ compatibility: DSH >= 0.2.1
 ## PPT 模板收录规则
 
 - `template-id` 使用与 Skill 相同的 kebab-case 规则，并在 `ppt/catalog.json` 中唯一。
-- 必须提供 `metadata.json`、`design.md`、`source/deck.pptd`、`source-zh/deck.pptd`；英文和中文工程页数、结构应一致。
+- 放在 `skills/dsh-ppt/assets/templates/<id>/`，必须提供 `metadata.json`、`design.md`、`source/deck.pptd`、`source-zh/deck.pptd`；英文和中文工程页数、结构应一致。
 - 每页必须有 `previews/<id>/<NN>.jpg`，从 `01.jpg` 连续编号，数量等于 `pageCount`。预览只用于选择，不能替代可编辑源文件。
 - 分类限于 `work`、`business`、`consulting`、`academic`、`editorial`、`promotion`；颜色使用 6 位十六进制值。
-- 模板须通过 PPTD 检查与渲染，正文不应含未经声明的字面量转义换行。第三方素材必须在元数据和 `ppt/licenses/` 中说明。
-- 批量同步 DSH Desktop 模板时运行：`node scripts/import-ppt-templates.mjs --from <dsh-desktop目录>`。
+- 模板须通过 `python3 skills/dsh-ppt/scripts/pptd.py check <源工程>`（0 个 error）并能 `render` 成 PPTX；字段限于 `skills/dsh-ppt/references/pptd.md` 列出的子集。第三方素材必须在元数据和 `ppt/licenses/` 中说明。
+- 批量同步 DSH Desktop 模板时运行：`node scripts/import-ppt-templates.mjs --from <dsh-desktop目录>`。脚本只更新模板源、预览、目录和许可证，不会覆盖 `skills/dsh-ppt` 的 SKILL.md 与脚本（Desktop 版依赖 DSH 没有的 `pptd_*` 工具）。
 
 ## 提交流程
 
@@ -69,5 +72,13 @@ compatibility: DSH >= 0.2.1
 ## 在 DSH 中使用
 
 - `dsh-leap` 插件默认读取 `https://gitee.com/leapai/dsh-skills/raw/master/catalog.json`，并按需加载被选中的 `SKILL.md` 与 PPT 预览。
+- `dsh-ppt` 依赖整个技能目录（`scripts/`、`assets/`），只下载 `SKILL.md` 无法运行；远程安装需同步整个 `skills/dsh-ppt/`。
 - 本地开发可在 DSH 的 `@deepseek-ai/dsh-skill-filesystem` 中把本仓库的 `skills/` 加入 `customSkillDirs`；本地项目或用户技能按 DSH 的优先级规则可以覆盖同名远程技能。
+- 手动试用 PPT 技能（不经过模型）：
 
+  ```bash
+  python3 skills/dsh-ppt/scripts/pptd.py templates
+  python3 skills/dsh-ppt/scripts/pptd.py new dsh-signal /tmp/demo --pages 1,4,12
+  python3 skills/dsh-ppt/scripts/pptd.py check /tmp/demo
+  <装有 python-pptx 的 python> skills/dsh-ppt/scripts/pptd.py render /tmp/demo -o /tmp/demo.pptx
+  ```

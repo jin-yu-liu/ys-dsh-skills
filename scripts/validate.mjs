@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { spawnSync } from 'node:child_process'
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
@@ -27,13 +28,31 @@ for (const entry of catalog.skills ?? []) {
 const ppt = json('ppt/catalog.json')
 if (!Array.isArray(ppt.templates) || ppt.templates.length === 0) fail('PPT 模板目录为空')
 for (const item of ppt.templates ?? []) {
-  const dir = `ppt/templates/${item.id}`
+  const dir = `skills/dsh-ppt/assets/templates/${item.id}`
   for (const required of ['metadata.json', 'design.md', 'source/deck.pptd', 'source-zh/deck.pptd']) {
     if (!existsSync(resolve(root, dir, required))) fail(`${item.id}: 缺少 ${required}`)
   }
   const previews = resolve(root, 'ppt/previews', item.id)
   const count = existsSync(previews) ? readdirSync(previews).filter(name => /^\d{2}\.jpg$/.test(name)).length : 0
   if (count !== item.pageCount) fail(`${item.id}: 预览图 ${count} 张，catalog 声明 ${item.pageCount} 张`)
+}
+
+// The skill's own checker must accept every bundled template source.
+const pptd = resolve(root, 'skills/dsh-ppt/scripts/pptd.py')
+if (!existsSync(pptd)) fail('缺少 skills/dsh-ppt/scripts/pptd.py')
+const python = process.env.PYTHON ?? 'python3'
+if (existsSync(pptd) && spawnSync(python, ['--version']).status === 0) {
+  for (const item of ppt.templates ?? []) {
+    for (const variant of ['source', 'source-zh']) {
+      const project = resolve(root, 'skills/dsh-ppt/assets/templates', item.id, variant)
+      const run = spawnSync(python, [pptd, 'check', project], { encoding: 'utf8' })
+      let report
+      try { report = JSON.parse(run.stdout) } catch { fail(`${item.id}/${variant}: pptd.py check 无法运行：${run.stderr.trim()}`); continue }
+      for (const error of report.errors ?? []) fail(`${item.id}/${variant}: ${error.file} 第 ${error.page} 页 ${error.elementId ?? ''} ${error.code}`)
+    }
+  }
+} else {
+  console.warn(`WARN: 找不到 ${python}，跳过 PPTD 模板检查`)
 }
 
 if (process.exitCode === undefined) console.log(`OK: ${catalog.skills.length} 个目录项，${ppt.templates.length} 套 PPT 模板`)
