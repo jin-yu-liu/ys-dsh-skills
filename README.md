@@ -2,7 +2,13 @@
 
 面向 [DeepSeek Harness（DSH）](https://github.com/deepseek-ai/deepseek-harness) 的社区技能目录。仓库同时遵循开放的 [Agent Skills 规范](https://agentskills.io/specification)：每个可用技能都是一个以 `SKILL.md` 为入口的独立目录，详细资料和资源按需加载。
 
-本仓库的 `catalog.json` 供 `dsh-leap` 插件发现技能；DSH 也可以直接把 `skills/` 配置为本地技能目录。当前已收录 `dsh-ppt`：技能自带 16 套双语 PPTD 模板和 `scripts/pptd.py`（检查 + 导出可编辑 PPTX），只依赖 DSH 内置 Python；`ppt/` 保存插件模板选择器用的目录和预览图。
+本仓库的 `catalog.json` 供 `dsh-leap` 插件发现技能；DSH 也可以直接把 `skills/` 配置为本地技能目录。当前已收录：
+
+- `dsh-ppt`：16 套双语 PPTD 模板和 `scripts/pptd.py`（检查 + 导出可编辑 PPTX），只依赖 DSH 内置 Python；`ppt/` 保存插件模板选择器用的目录和预览图。
+- `dsh-image`：22 套生图提示词模板（整理自 [awesome-gpt-image-2](https://github.com/freestylefly/awesome-gpt-image-2)，MIT），`image/` 保存选择器目录和封面。
+- `dsh-video`：22 套短视频题材模板和 6 个构件（来自 [ai-shortfilm-prompts](https://github.com/jnMetaCode/ai-shortfilm-prompts) 的 `templates/`，MIT），`video/` 保存选择器目录。
+
+生图 / 生视频技能通过 `dsh-leap` 插件的 `leap_*` 工具调用跃数AI站点，没有该插件的客户端只能用它们写提示词。
 
 ## 目录结构
 
@@ -62,17 +68,24 @@ compatibility: DSH >= 0.2.1
 - 模板须通过 `python3 skills/dsh-ppt/scripts/pptd.py check <源工程>`（0 个 error）并能 `render` 成 PPTX；字段限于 `skills/dsh-ppt/references/pptd.md` 列出的子集。第三方素材必须在元数据和 `ppt/licenses/` 中说明。
 - 批量同步 DSH Desktop 模板时运行：`node scripts/import-ppt-templates.mjs --from <dsh-desktop目录>`。脚本只更新模板源、预览、目录和许可证，不会覆盖 `skills/dsh-ppt` 的 SKILL.md 与脚本（Desktop 版依赖 DSH 没有的 `pptd_*` 工具）。
 
+## 生图 / 生视频模板收录规则
+
+- 选择器目录：`image/catalog.json`、`video/catalog.json`，字段 `format`、`source`、`defaultTemplateId`、`categories[{id,name}]`、`templates[{id,category,name,description,cover?,aspect?,palette?,variables?,source?}]`；`freeform`（自由创作）是内置项，没有模板文件。
+- 模板正文：生图 `skills/dsh-image/assets/templates/<id>.md`，视频 `skills/dsh-video/assets/templates/<id>.zh.md` 与 `<id>.md`；有 `cover: true` 的生图模板必须有 `image/previews/<id>.jpg`。新模板还要加进对应 SKILL.md 的模板表（`npm run validate` 会检查）。
+- 从上游同步：`node scripts/import-media-templates.mjs --image <awesome-gpt-image-2 目录> --video <ai-shortfilm-prompts 目录>`（封面缩放需要 Pillow）。脚本重写模板、目录、许可证和 `THIRD_PARTY_NOTICES.md`，不改两个 SKILL.md；视频模板的中文名称与简介在脚本的 `VIDEO_DISPLAY` 中维护。
+
 ## 提交流程
 
 1. 新建技能目录并更新 `catalog.json`；若是 PPT 模板，同时更新 `ppt/catalog.json` 和许可证。
-2. 运行 `npm run validate`。
+2. 改动了 `skills/` 时运行 `npm run bundle`，再运行 `npm run validate`。
 3. 在合并请求中写明用途、测试方式、DSH 版本、外部依赖、权限/联网行为和许可证来源；涉及 UI 的内容附截图或预览。
 4. 维护者按结构、可用性、安全性、可移植性、版权和重复度评审。无法复现、功能重叠但无明显改进、只有提示词堆砌或风险说明不足的提交不会收录。
 
 ## 在 DSH 中使用
 
 - `dsh-leap` 插件默认读取 `https://gitee.com/leapai/dsh-skills/raw/master/catalog.json`，并按需加载被选中的 `SKILL.md` 与 PPT 预览。
-- `dsh-ppt` 依赖整个技能目录（`scripts/`、`assets/`），只下载 `SKILL.md` 无法运行；远程安装需同步整个 `skills/dsh-ppt/`。
+- 技能依赖整个目录（如 `dsh-ppt` 的 `scripts/`、`assets/`），只下载 `SKILL.md` 无法运行。因此每个 `available` 技能都发布一个技能包 `bundles/<name>.json.gz`（目录下全部文件的 gzip JSON），`catalog.json` 的 `skill.bundle` 记录其路径、sha256、大小和文件数。`dsh-leap` 下载技能包、校验 sha256 后解压到 `$DSH_HOME/leap/skills/<name>/<sha前12位>/`，以本地目录加载技能。
+- **改了 `skills/` 下任何文件后必须运行 `npm run bundle`** 并一起提交 `bundles/` 与 `catalog.json`；技能包过期时 `npm run validate` 会报错。
 - 本地开发可在 DSH 的 `@deepseek-ai/dsh-skill-filesystem` 中把本仓库的 `skills/` 加入 `customSkillDirs`；本地项目或用户技能按 DSH 的优先级规则可以覆盖同名远程技能。
 - 手动试用 PPT 技能（不经过模型）：
 

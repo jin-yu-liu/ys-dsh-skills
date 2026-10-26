@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "version": "2026-10-26.1",
+  "version": "2026-10-26.2",
   "skills": [
     {
       "id": "ppt",
@@ -13,6 +13,7 @@
       "skill": {
         "name": "dsh-ppt",
         "path": "skills/dsh-ppt/SKILL.md",
+        "bundle": { "path": "bundles/dsh-ppt.json.gz", "sha256": "a67cb28c35bbf86d497da2dbbc3e78663fe32e015badf11f4e10977e364469c6", "size": 497824, "files": 470 },
         "model_invocable": true,
         "user_invocable": true
       },
@@ -21,20 +22,36 @@
     {
       "id": "image",
       "name": { "zh": "AI生图", "en": "AI Image" },
-      "description": { "zh": "文字生成图片（规划中）", "en": "Generate images from text (planned)" },
+      "description": { "zh": "按模板写提示词，用站内图像模型生成图片", "en": "Generate images with site models from prompt templates" },
       "icon": "🎨",
       "order": 20,
       "default_pinned": true,
-      "status": "placeholder"
+      "status": "available",
+      "skill": {
+        "name": "dsh-image",
+        "path": "skills/dsh-image/SKILL.md",
+        "bundle": { "path": "bundles/dsh-image.json.gz", "sha256": "1c2e7069620c583ea464e7217ef99f690be4bbacaf38ddc8441400073d2ab611", "size": 39735, "files": 23 },
+        "model_invocable": true,
+        "user_invocable": true
+      },
+      "presentation": { "catalog": "image/catalog.json" }
     },
     {
       "id": "video",
       "name": { "zh": "AI生视频", "en": "AI Video" },
-      "description": { "zh": "文字或图片生成视频（规划中）", "en": "Generate video from text or images (planned)" },
+      "description": { "zh": "按题材模板写分镜，用站内视频模型生成短视频", "en": "Generate short videos with site models from genre templates" },
       "icon": "🎬",
       "order": 30,
       "default_pinned": true,
-      "status": "placeholder"
+      "status": "available",
+      "skill": {
+        "name": "dsh-video",
+        "path": "skills/dsh-video/SKILL.md",
+        "bundle": { "path": "bundles/dsh-video.json.gz", "sha256": "22029cbb23c4738bf16d2c04f4498f02d63c23670dc82f0ed66a88266ec776a9", "size": 142457, "files": 57 },
+        "model_invocable": true,
+        "user_invocable": true
+      },
+      "presentation": { "catalog": "video/catalog.json" }
     },
     {
       "id": "writing",

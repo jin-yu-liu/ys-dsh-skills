@@ -1,0 +1,630 @@
+{
+  "format": 1,
+  "source": {
+    "repository": "https://github.com/freestylefly/awesome-gpt-image-2",
+    "commit": "63e6176fa01be51c000108dacd72716d3e46784b"
+  },
+  "defaultTemplateId": "freeform",
+  "categories": [
+    {
+      "id": "general",
+      "name": {
+        "zh": "通用",
+        "en": "General"
+      }
+    },
+    {
+      "id": "ui",
+      "name": {
+        "zh": "UI 与界面",
+        "en": "UI & Interfaces"
+      }
+    },
+    {
+      "id": "infographic",
+      "name": {
+        "zh": "图表与信息可视化",
+        "en": "Charts & Infographics"
+      }
+    },
+    {
+      "id": "poster",
+      "name": {
+        "zh": "海报与排版",
+        "en": "Posters & Typography"
+      }
+    },
+    {
+      "id": "product",
+      "name": {
+        "zh": "商品与电商",
+        "en": "Products & E-commerce"
+      }
+    },
+    {
+      "id": "brand",
+      "name": {
+        "zh": "品牌与标志",
+        "en": "Brand & Logos"
+      }
+    },
+    {
+      "id": "architecture",
+      "name": {
+        "zh": "建筑与空间",
+        "en": "Architecture & Spaces"
+      }
+    },
+    {
+      "id": "photo",
+      "name": {
+        "zh": "摄影与写实",
+        "en": "Photography & Realism"
+      }
+    },
+    {
+      "id": "illustration",
+      "name": {
+        "zh": "插画与艺术",
+        "en": "Illustration & Art"
+      }
+    },
+    {
+      "id": "character",
+      "name": {
+        "zh": "人物与角色",
+        "en": "Characters & People"
+      }
+    },
+    {
+      "id": "scene",
+      "name": {
+        "zh": "场景与叙事",
+        "en": "Scenes & Storytelling"
+      }
+    },
+    {
+      "id": "history",
+      "name": {
+        "zh": "历史与古风题材",
+        "en": "History & Classical Themes"
+      }
+    },
+    {
+      "id": "document",
+      "name": {
+        "zh": "文档与出版物",
+        "en": "Documents & Publishing"
+      }
+    },
+    {
+      "id": "other",
+      "name": {
+        "zh": "其他应用场景",
+        "en": "Other Use Cases"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "freeform",
+      "category": "general",
+      "name": {
+        "zh": "自由创作",
+        "en": "Free form"
+      },
+      "description": {
+        "zh": "不套用模板，按你的描述直接组织提示词",
+        "en": "No template: the prompt follows your description"
+      },
+      "palette": {
+        "background": "EEF2FF",
+        "accent": "4F46E5",
+        "text": "1E1B4B"
+      }
+    },
+    {
+      "id": "ui-screenshot-system",
+      "category": "ui",
+      "name": {
+        "zh": "UI 截图系统",
+        "en": "UI Screenshot System"
+      },
+      "description": {
+        "zh": "生成 App、网页、仪表盘、社媒截图等高保真界面。",
+        "en": "High-fidelity app, web, dashboard, and social interface prompts."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 17,
+          "title": "界面交互设计图",
+          "author": "@wory37303852",
+          "url": "https://x.com/wory37303852"
+        }
+      }
+    },
+    {
+      "id": "infographic-engine",
+      "category": "infographic",
+      "name": {
+        "zh": "信息图引擎",
+        "en": "Infographic Engine"
+      },
+      "description": {
+        "zh": "生成结构化图解、时间线、知识图谱和技术解释图。",
+        "en": "Structured diagrams, timelines, knowledge maps, and explainers."
+      },
+      "aspect": "3:2",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 334,
+          "title": "RAG 技术详解图",
+          "author": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）"
+        }
+      }
+    },
+    {
+      "id": "scientific-scale-diagram",
+      "category": "infographic",
+      "name": {
+        "zh": "科学尺度缩放图",
+        "en": "Scientific Scale Diagram"
+      },
+      "description": {
+        "zh": "生成多尺度科学信息图，强调层级、标签和可读性。",
+        "en": "Multi-scale science visuals with readable labels and hierarchy."
+      },
+      "aspect": "3:2",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 341,
+          "title": "AP Calculus 学习表信息图",
+          "author": "@hqmank",
+          "url": "https://x.com/hqmank/status/2048587150544028084"
+        }
+      }
+    },
+    {
+      "id": "poster-layout-system",
+      "category": "poster",
+      "name": {
+        "zh": "海报排版系统",
+        "en": "Poster Layout System"
+      },
+      "description": {
+        "zh": "生成活动、产品、电影和社媒传播海报。",
+        "en": "Event, product, movie, and social poster compositions."
+      },
+      "aspect": "3:4",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 345,
+          "title": "法新浪潮撕纸电影海报",
+          "author": "@bananaprompts",
+          "url": "https://x.com/bananaprompts/status/2048541390900994476"
+        }
+      }
+    },
+    {
+      "id": "sports-campaign-poster",
+      "category": "poster",
+      "name": {
+        "zh": "运动商业 Campaign",
+        "en": "Sports Campaign Poster"
+      },
+      "description": {
+        "zh": "生成运动员、道具、品牌色统一的商业运动海报。",
+        "en": "Commercial sports visuals with athletes, props, and brand color."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 350,
+          "title": "足球球员数据涂鸦海报",
+          "author": "@ryanpp27",
+          "url": "https://x.com/ryanpp27/status/2048602248524214542"
+        }
+      }
+    },
+    {
+      "id": "conceptual-typography-poster",
+      "category": "poster",
+      "name": {
+        "zh": "概念字体海报",
+        "en": "Conceptual Typography Poster"
+      },
+      "description": {
+        "zh": "生成以标题文字为主视觉的高级字体海报。",
+        "en": "Premium title-led posters with strong typographic systems."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 355,
+          "title": "概念字体海报 Prompt",
+          "author": "@dotey",
+          "url": "https://x.com/dotey/status/2048793351290327381"
+        }
+      }
+    },
+    {
+      "id": "ink-double-exposure-poster",
+      "category": "poster",
+      "name": {
+        "zh": "水墨双重曝光海报",
+        "en": "Ink Double Exposure Poster"
+      },
+      "description": {
+        "zh": "生成水墨、人像与层叠氛围结合的视觉海报。",
+        "en": "Chinese ink, portrait, and layered atmosphere composition."
+      },
+      "aspect": "9:16",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 359,
+          "title": "水墨双重曝光人物海报",
+          "author": "@Goodmanprotocol",
+          "url": "https://x.com/Goodmanprotocol/status/2049002279051895243"
+        }
+      }
+    },
+    {
+      "id": "nature-science-poster",
+      "category": "poster",
+      "name": {
+        "zh": "自然科普海报",
+        "en": "Nature Science Poster"
+      },
+      "description": {
+        "zh": "生成极简产品感自然科普海报。",
+        "en": "Minimal product-style science posters for natural subjects."
+      },
+      "aspect": "9:16",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 339,
+          "title": "Apple 风格自然科普海报",
+          "author": "@berryxia",
+          "url": "https://x.com/berryxia/status/2048251413147644100"
+        }
+      }
+    },
+    {
+      "id": "product-commerce-visual",
+      "category": "product",
+      "name": {
+        "zh": "商品商业视觉",
+        "en": "Product Commerce Visual"
+      },
+      "description": {
+        "zh": "生成商品图、包装、详情页和卖点排版。",
+        "en": "Product shots, packaging, detail pages, and selling-point layouts."
+      },
+      "aspect": "4:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 373,
+          "title": "高端肉类海鲜品牌英雄图",
+          "author": "@xpg0970",
+          "url": "https://x.com/xpg0970/status/2050108279385419965"
+        }
+      }
+    },
+    {
+      "id": "personalized-beauty-report",
+      "category": "product",
+      "name": {
+        "zh": "个性化美妆报告",
+        "en": "Personalized Beauty Report"
+      },
+      "description": {
+        "zh": "生成美妆与生活方式产品的推荐报告版式。",
+        "en": "Recommendation-report layouts for beauty and lifestyle products."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 353,
+          "title": "品牌口红推荐报告信息图",
+          "author": "@liyue_ai",
+          "url": "https://x.com/liyue_ai/status/2048667226195317219"
+        }
+      }
+    },
+    {
+      "id": "brand-identity-package",
+      "category": "brand",
+      "name": {
+        "zh": "品牌身份包",
+        "en": "Brand Identity Package"
+      },
+      "description": {
+        "zh": "生成 Logo、配色、字体、应用触点与品牌系统。",
+        "en": "Logo, palette, typography, applications, and brand touchpoints."
+      },
+      "aspect": "3:4",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 354,
+          "title": "Logo 与品牌身份系统提示词合集",
+          "author": "@wanerfu",
+          "url": "https://x.com/wanerfu/status/2048659924822184026"
+        }
+      }
+    },
+    {
+      "id": "brand-touchpoint-board",
+      "category": "brand",
+      "name": {
+        "zh": "品牌触点视觉板",
+        "en": "Brand Touchpoint Board"
+      },
+      "description": {
+        "zh": "生成包装、社媒、网页和展示场景里的品牌触点板。",
+        "en": "Campaign boards across packaging, social, web, and display contexts."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 362,
+          "title": "抹茶品牌触点系统视觉板",
+          "author": "@Preda2005",
+          "url": "https://x.com/Preda2005/status/2049846981271699685"
+        }
+      }
+    },
+    {
+      "id": "architecture-space",
+      "category": "architecture",
+      "name": {
+        "zh": "建筑与空间",
+        "en": "Architecture & Space"
+      },
+      "description": {
+        "zh": "生成室内、建筑、城市地图和空间概念视觉。",
+        "en": "Interior, exterior, city, map, and spatial concept visuals."
+      },
+      "aspect": "3:2",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 331,
+          "title": "西安手绘水彩城市地图",
+          "author": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）"
+        }
+      }
+    },
+    {
+      "id": "realistic-photography",
+      "category": "photo",
+      "name": {
+        "zh": "写实摄影",
+        "en": "Realistic Photography"
+      },
+      "description": {
+        "zh": "控制镜头、光线、胶片质感和纪实摄影效果。",
+        "en": "Lens, lighting, film texture, and documentary-style photo prompts."
+      },
+      "aspect": "9:16",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 377,
+          "title": "樱花咖啡户外人像",
+          "author": "@xRahultripathi",
+          "url": "https://x.com/xRahultripathi/status/2050677614168391716"
+        }
+      }
+    },
+    {
+      "id": "street-accident-moment",
+      "category": "photo",
+      "name": {
+        "zh": "街头意外瞬间摄影",
+        "en": "Street Accident Moment"
+      },
+      "description": {
+        "zh": "生成手机纪实风街头瞬间，并加入负面约束。",
+        "en": "Realistic phone-photo scenes with negative constraints."
+      },
+      "aspect": "9:16",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 376,
+          "title": "泼洒抹茶街头手机照片",
+          "author": "@Shinning1010",
+          "url": "https://x.com/Shinning1010/status/2050693240253214894"
+        }
+      }
+    },
+    {
+      "id": "illustration-art-style",
+      "category": "illustration",
+      "name": {
+        "zh": "插画与艺术风格",
+        "en": "Illustration & Art Style"
+      },
+      "description": {
+        "zh": "生成动漫、水彩、水墨、材质实验和艺术风格图。",
+        "en": "Anime, watercolor, ink, material experiments, and art direction."
+      },
+      "aspect": "3:4",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 346,
+          "title": "立体刺绣小鸟花枝",
+          "author": "@dotey",
+          "url": "https://x.com/dotey/status/2048529821706195442"
+        }
+      }
+    },
+    {
+      "id": "character-design-sheet",
+      "category": "character",
+      "name": {
+        "zh": "角色设定表",
+        "en": "Character Design Sheet"
+      },
+      "description": {
+        "zh": "生成角色设定、动作分解和一致性参考。",
+        "en": "Characters, pose sheets, action grids, and identity consistency."
+      },
+      "aspect": "9:16",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 347,
+          "title": "4×4 动作分解参考表",
+          "author": "@oggii_0",
+          "url": "https://x.com/oggii_0/status/2048614158699217302"
+        }
+      }
+    },
+    {
+      "id": "3d-collectible-toy",
+      "category": "character",
+      "name": {
+        "zh": "3D 收藏玩具",
+        "en": "3D Collectible Toy"
+      },
+      "description": {
+        "zh": "把参考图转换成高级 3D 收藏玩具效果。",
+        "en": "Reference photo to premium 3D collectible figure prompts."
+      },
+      "aspect": "3:4",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 378,
+          "title": "高端 3D 收藏玩具头像",
+          "author": "@Genematicai",
+          "url": "https://x.com/Genematicai/status/2050654848216109429"
+        }
+      }
+    },
+    {
+      "id": "scene-storytelling",
+      "category": "scene",
+      "name": {
+        "zh": "场景叙事",
+        "en": "Scene Storytelling"
+      },
+      "description": {
+        "zh": "生成分镜、世界观、故事场景和情绪节奏。",
+        "en": "Storyboards, worldbuilding, narrative scenes, and emotional pacing."
+      },
+      "aspect": "1:1",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 330,
+          "title": "月下美女直播画面",
+          "author": "苍何原创实测（公众号文章《我逆向了 329 条 GPT-Image2 提示词模板，全部开源！》）"
+        }
+      }
+    },
+    {
+      "id": "history-classical-themes",
+      "category": "history",
+      "name": {
+        "zh": "历史与古风题材",
+        "en": "History & Classical Themes"
+      },
+      "description": {
+        "zh": "生成朝代服饰、长卷叙事、诗词和传统题材。",
+        "en": "Dynasty clothing, scroll narrative, poetry, and traditional motifs."
+      },
+      "aspect": "2:3",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 375,
+          "title": "古希腊三哲时间轴城市图",
+          "author": "@ToroJushiAi",
+          "url": "https://x.com/ToroJushiAi/status/2050713034503409874"
+        }
+      }
+    },
+    {
+      "id": "document-publishing",
+      "category": "document",
+      "name": {
+        "zh": "文档与出版物",
+        "en": "Document & Publishing"
+      },
+      "description": {
+        "zh": "生成白皮书、手册、百科图鉴和页面系统。",
+        "en": "White papers, manuals, encyclopedic plates, and page systems."
+      },
+      "aspect": "1:1",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 360,
+          "title": "长发造型分析信息图",
+          "author": "@Gemalpha_88",
+          "url": "https://x.com/Gemalpha_88/status/2048918707343401034"
+        }
+      }
+    },
+    {
+      "id": "concept-product-breakdown",
+      "category": "other",
+      "name": {
+        "zh": "概念产品研发拆解",
+        "en": "Concept Product Breakdown"
+      },
+      "description": {
+        "zh": "生成研发板、拆解图、混合任务和特殊输出。",
+        "en": "R&D boards, exploded views, mixed tasks, and special outputs."
+      },
+      "aspect": "3:4",
+      "cover": true,
+      "source": {
+        "license": "MIT",
+        "cover": {
+          "case": 370,
+          "title": "Crumple Chair 概念沙发研发板",
+          "author": "@ShamsAmin56",
+          "url": "https://x.com/ShamsAmin56/status/2050281206139461780"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,700 @@
+{
+  "format": 1,
+  "source": {
+    "repository": "https://github.com/jnMetaCode/ai-shortfilm-prompts",
+    "commit": "d196a96d581c403cda78fc8f09a6e38f887e09e2"
+  },
+  "defaultTemplateId": "freeform",
+  "categories": [
+    {
+      "id": "general",
+      "name": {
+        "zh": "通用",
+        "en": "General"
+      }
+    },
+    {
+      "id": "drama",
+      "name": {
+        "zh": "剧情/短剧",
+        "en": "Drama"
+      }
+    },
+    {
+      "id": "commercial",
+      "name": {
+        "zh": "广告/产品",
+        "en": "Commercial"
+      }
+    },
+    {
+      "id": "pets",
+      "name": {
+        "zh": "萌宠",
+        "en": "Pets"
+      }
+    },
+    {
+      "id": "food",
+      "name": {
+        "zh": "美食",
+        "en": "Food"
+      }
+    },
+    {
+      "id": "travel",
+      "name": {
+        "zh": "旅行/风光",
+        "en": "Travel & Scenery"
+      }
+    },
+    {
+      "id": "music",
+      "name": {
+        "zh": "音乐/舞蹈",
+        "en": "Music & Dance"
+      }
+    },
+    {
+      "id": "fashion",
+      "name": {
+        "zh": "时尚/美妆",
+        "en": "Fashion & Beauty"
+      }
+    },
+    {
+      "id": "action",
+      "name": {
+        "zh": "科幻/动作",
+        "en": "Sci-fi & Action"
+      }
+    },
+    {
+      "id": "stylized",
+      "name": {
+        "zh": "风格化",
+        "en": "Stylized"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "id": "freeform",
+      "category": "general",
+      "name": {
+        "zh": "自由创作",
+        "en": "Free form"
+      },
+      "description": {
+        "zh": "不套用题材模板，用 5 段式结构直接写分镜提示词",
+        "en": "No genre template: write the shot prompt with the 5-stage structure"
+      },
+      "palette": {
+        "background": "EEF2FF",
+        "accent": "4F46E5",
+        "text": "1E1B4B"
+      }
+    },
+    {
+      "id": "family-recipe-farewell",
+      "category": "drama",
+      "name": {
+        "zh": "妈妈的菜谱",
+        "en": "A Mother's Recipe"
+      },
+      "description": {
+        "zh": "亲情叙事：一张手写菜谱在母女两代间传下去",
+        "en": "Family story: a handwritten recipe passed down"
+      },
+      "palette": {
+        "background": "1F1D2B",
+        "accent": "E0B15C",
+        "text": "F4EFE6"
+      },
+      "variables": [],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/family-recipe-farewell.zh.md"
+      }
+    },
+    {
+      "id": "found-footage-horror",
+      "category": "drama",
+      "name": {
+        "zh": "监控录像恐怖",
+        "en": "Found-footage Horror"
+      },
+      "description": {
+        "zh": "劣质监控画面里的异常一瞬，伪纪录恐怖",
+        "en": "Something wrong caught on a cheap security camera"
+      },
+      "palette": {
+        "background": "1F1D2B",
+        "accent": "E0B15C",
+        "text": "F4EFE6"
+      },
+      "variables": [
+        "place",
+        "wrong_thing",
+        "cam_type",
+        "timestamp",
+        "night_mode"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/found-footage-horror.zh.md"
+      }
+    },
+    {
+      "id": "micro-drama",
+      "category": "drama",
+      "name": {
+        "zh": "竖屏短剧",
+        "en": "Vertical Micro-drama"
+      },
+      "description": {
+        "zh": "冷开钩子 + 正反打对峙 + 悬念结尾",
+        "en": "Cold-open hook, shot-reverse-shot clash, cliffhanger"
+      },
+      "palette": {
+        "background": "1F1D2B",
+        "accent": "E0B15C",
+        "text": "F4EFE6"
+      },
+      "variables": [
+        "a",
+        "b",
+        "hook",
+        "conflict",
+        "cliff"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/micro-drama.zh.md"
+      }
+    },
+    {
+      "id": "movie-trailer",
+      "category": "drama",
+      "name": {
+        "zh": "电影预告片",
+        "en": "Teaser Trailer"
+      },
+      "description": {
+        "zh": "层层升级的多镜蒙太奇，收在片名",
+        "en": "Escalating multi-shot montage ending on the title"
+      },
+      "palette": {
+        "background": "1F1D2B",
+        "accent": "E0B15C",
+        "text": "F4EFE6"
+      },
+      "variables": [
+        "world",
+        "protagonist",
+        "threat",
+        "title_word",
+        "grade"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/movie-trailer.zh.md"
+      }
+    },
+    {
+      "id": "car-commercial",
+      "category": "commercial",
+      "name": {
+        "zh": "汽车广告",
+        "en": "Car Commercial"
+      },
+      "description": {
+        "zh": "路面、光扫和车身细节驱动的汽车大片",
+        "en": "Road, light sweeps and body details sell the car"
+      },
+      "palette": {
+        "background": "F3F4F6",
+        "accent": "111827",
+        "text": "111827"
+      },
+      "variables": [
+        "car",
+        "road",
+        "surface",
+        "light_sweep",
+        "grade"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/car-commercial.zh.md"
+      }
+    },
+    {
+      "id": "product-commercial",
+      "category": "commercial",
+      "name": {
+        "zh": "产品硬广",
+        "en": "Product Hero Ad"
+      },
+      "description": {
+        "zh": "按节拍切的产品主视觉广告",
+        "en": "Beat-driven hero shots of one product"
+      },
+      "palette": {
+        "background": "F3F4F6",
+        "accent": "111827",
+        "text": "111827"
+      },
+      "variables": [
+        "product",
+        "material",
+        "hero_action",
+        "surface",
+        "accent_color"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/product-commercial.zh.md"
+      }
+    },
+    {
+      "id": "animal-vlog",
+      "category": "pets",
+      "name": {
+        "zh": "会说话的动物 Vlog",
+        "en": "Talking Animal Vlog"
+      },
+      "description": {
+        "zh": "萌宠自拍视角讲段子",
+        "en": "A pet films itself and delivers a punchline"
+      },
+      "palette": {
+        "background": "FFF4E6",
+        "accent": "F08C00",
+        "text": "5C3D11"
+      },
+      "variables": [
+        "animal",
+        "voice",
+        "setting",
+        "bit",
+        "punchline"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/animal-vlog.zh.md"
+      }
+    },
+    {
+      "id": "elderly-cat-companion",
+      "category": "pets",
+      "name": {
+        "zh": "奶奶与猫",
+        "en": "Grandmother & Cat"
+      },
+      "description": {
+        "zh": "留下来的那只猫，安静的陪伴叙事",
+        "en": "A quiet story of the cat that stayed"
+      },
+      "palette": {
+        "background": "FFF4E6",
+        "accent": "F08C00",
+        "text": "5C3D11"
+      },
+      "variables": [],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/elderly-cat-companion.zh.md"
+      }
+    },
+    {
+      "id": "pet-lifetime-narrative",
+      "category": "pets",
+      "name": {
+        "zh": "萌宠一生的陪伴",
+        "en": "A Pet’s Lifetime"
+      },
+      "description": {
+        "zh": "跨越一生的萌宠与家人的情感短片",
+        "en": "A pet and a family across a lifetime"
+      },
+      "palette": {
+        "background": "FFF4E6",
+        "accent": "F08C00",
+        "text": "5C3D11"
+      },
+      "variables": [],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/pet-lifetime-narrative.zh.md"
+      }
+    },
+    {
+      "id": "food-asmr",
+      "category": "food",
+      "name": {
+        "zh": "美食 ASMR",
+        "en": "Food ASMR"
+      },
+      "description": {
+        "zh": "声音和质感驱动的美食特写",
+        "en": "Sound- and texture-led food close-ups"
+      },
+      "palette": {
+        "background": "FFF1E6",
+        "accent": "D9480F",
+        "text": "4A1D0A"
+      },
+      "variables": [
+        "dish",
+        "tool",
+        "key_sound",
+        "texture",
+        "ambient"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/food-asmr.zh.md"
+      }
+    },
+    {
+      "id": "drone-fpv",
+      "category": "travel",
+      "name": {
+        "zh": "无人机 FPV",
+        "en": "Drone / FPV"
+      },
+      "description": {
+        "zh": "穿越缝隙、最后揭示全景的航拍",
+        "en": "Fly through a gap, then reveal the vista"
+      },
+      "palette": {
+        "background": "E7F5FF",
+        "accent": "1C7ED6",
+        "text": "0B2E4F"
+      },
+      "variables": [
+        "subject",
+        "move",
+        "gap",
+        "reveal",
+        "light"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/drone-fpv.zh.md"
+      }
+    },
+    {
+      "id": "nature-timelapse",
+      "category": "travel",
+      "name": {
+        "zh": "风光延时",
+        "en": "Nature Timelapse"
+      },
+      "description": {
+        "zh": "光线和天色随时间流动的风光延时",
+        "en": "Light and sky moving over a landscape"
+      },
+      "palette": {
+        "background": "E7F5FF",
+        "accent": "1C7ED6",
+        "text": "0B2E4F"
+      },
+      "variables": [
+        "place",
+        "time_arc",
+        "motion",
+        "grade",
+        "foreground"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/nature-timelapse.zh.md"
+      }
+    },
+    {
+      "id": "travel-vlog",
+      "category": "travel",
+      "name": {
+        "zh": "旅行 Vlog",
+        "en": "Travel Vlog"
+      },
+      "description": {
+        "zh": "大景、细节、人物拼出在地感",
+        "en": "Wides, details and people build a sense of place"
+      },
+      "palette": {
+        "background": "E7F5FF",
+        "accent": "1C7ED6",
+        "text": "0B2E4F"
+      },
+      "variables": [
+        "place",
+        "wide",
+        "detail",
+        "people",
+        "traveler"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/travel-vlog.zh.md"
+      }
+    },
+    {
+      "id": "dance",
+      "category": "music",
+      "name": {
+        "zh": "舞蹈短片",
+        "en": "Dance Film"
+      },
+      "description": {
+        "zh": "为编舞服务的运镜和空间",
+        "en": "Camera and space in service of choreography"
+      },
+      "palette": {
+        "background": "2B1238",
+        "accent": "F06595",
+        "text": "FDE7F1"
+      },
+      "variables": [
+        "dancer",
+        "style_tempo",
+        "space",
+        "move",
+        "grade"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/dance.zh.md"
+      }
+    },
+    {
+      "id": "music-video",
+      "category": "music",
+      "name": {
+        "zh": "音乐 MV",
+        "en": "Music Video"
+      },
+      "description": {
+        "zh": "按节拍卡点剪辑的表演 MV",
+        "en": "Beat-synced performance cuts"
+      },
+      "palette": {
+        "background": "2B1238",
+        "accent": "F06595",
+        "text": "FDE7F1"
+      },
+      "variables": [
+        "artist",
+        "genre_tempo",
+        "look",
+        "grade",
+        "hook_moment"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/music-video.zh.md"
+      }
+    },
+    {
+      "id": "fashion-film",
+      "category": "fashion",
+      "name": {
+        "zh": "时尚大片",
+        "en": "Fashion Film"
+      },
+      "description": {
+        "zh": "面料动态与布光主导的 Look Book",
+        "en": "Fabric motion and light lead the look book"
+      },
+      "palette": {
+        "background": "F8F0EC",
+        "accent": "A61E4D",
+        "text": "3B1020"
+      },
+      "variables": [
+        "model",
+        "fabric_motion",
+        "set",
+        "light",
+        "grade"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/fashion-film.zh.md"
+      }
+    },
+    {
+      "id": "15s-transformation",
+      "category": "action",
+      "name": {
+        "zh": "15 秒变身",
+        "en": "15s Transformation"
+      },
+      "description": {
+        "zh": "一镜到底的变身特效，去 IP 通用骨架",
+        "en": "One-take transformation, IP-free skeleton"
+      },
+      "palette": {
+        "background": "0B1220",
+        "accent": "22D3EE",
+        "text": "E2E8F0"
+      },
+      "variables": [
+        "核心配色",
+        "道具材质",
+        "腰带核心",
+        "触发词",
+        "眼球光色",
+        "头盔特征",
+        "战衣配色",
+        "场景"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/15s-transformation.zh.md"
+      }
+    },
+    {
+      "id": "anime-to-real",
+      "category": "action",
+      "name": {
+        "zh": "动漫转真人",
+        "en": "Anime to Live-action"
+      },
+      "description": {
+        "zh": "把 2D 角色还原成真人实拍质感",
+        "en": "Turn a 2D character into live action"
+      },
+      "palette": {
+        "background": "0B1220",
+        "accent": "22D3EE",
+        "text": "E2E8F0"
+      },
+      "variables": [
+        "silhouette",
+        "signature",
+        "palette",
+        "world",
+        "prop"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/anime-to-real.zh.md"
+      }
+    },
+    {
+      "id": "cyberpunk-city",
+      "category": "action",
+      "name": {
+        "zh": "赛博朋克城市",
+        "en": "Cyberpunk City"
+      },
+      "description": {
+        "zh": "霓虹雨夜，以环境为主角的城市漫游",
+        "en": "Neon, rain and the city as the protagonist"
+      },
+      "palette": {
+        "background": "0B1220",
+        "accent": "22D3EE",
+        "text": "E2E8F0"
+      },
+      "variables": [
+        "city_flavour",
+        "weather",
+        "neon_palette",
+        "figure",
+        "move"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/cyberpunk-city.zh.md"
+      }
+    },
+    {
+      "id": "sci-fi-space",
+      "category": "action",
+      "name": {
+        "zh": "硬科幻太空",
+        "en": "Hard Sci-fi Space"
+      },
+      "description": {
+        "zh": "失重、宇宙尺度与真实磨损感",
+        "en": "Zero-G, cosmic scale and worn hardware"
+      },
+      "palette": {
+        "background": "0B1220",
+        "accent": "22D3EE",
+        "text": "E2E8F0"
+      },
+      "variables": [
+        "subject",
+        "action",
+        "vista",
+        "wear",
+        "light"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sci-fi-space.zh.md"
+      }
+    },
+    {
+      "id": "sports-slowmo",
+      "category": "action",
+      "name": {
+        "zh": "运动慢动作",
+        "en": "Sports Slow-mo"
+      },
+      "description": {
+        "zh": "高速摄影定格运动的决定性瞬间",
+        "en": "High-speed capture of the decisive moment"
+      },
+      "palette": {
+        "background": "0B1220",
+        "accent": "22D3EE",
+        "text": "E2E8F0"
+      },
+      "variables": [
+        "athlete",
+        "moment",
+        "detail",
+        "venue",
+        "palette"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sports-slowmo.zh.md"
+      }
+    },
+    {
+      "id": "claymation",
+      "category": "stylized",
+      "name": {
+        "zh": "黏土定格动画",
+        "en": "Claymation"
+      },
+      "description": {
+        "zh": "材质和布光驱动的定格动画风格",
+        "en": "Material- and light-driven stop motion"
+      },
+      "palette": {
+        "background": "EBFBEE",
+        "accent": "2F9E44",
+        "text": "173D21"
+      },
+      "variables": [
+        "character",
+        "set",
+        "action",
+        "material",
+        "lighting"
+      ],
+      "source": {
+        "license": "MIT",
+        "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/claymation.zh.md"
+      }
+    }
+  ]
+}
