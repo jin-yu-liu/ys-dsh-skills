@@ -1,0 +1,322 @@
+{
+  "format": 1,
+  "source": {
+    "repository": "https://github.com/dataelement/dsh-desktop",
+    "commit": "67df6719fb1895139cd1ac595b2367b5642be67c"
+  },
+  "defaultTemplateId": "dsh-engineering-blueprint",
+  "categories": [
+    "work",
+    "business",
+    "consulting",
+    "academic",
+    "editorial",
+    "promotion"
+  ],
+  "templates": [
+    {
+      "id": "dsh-editorial-forest",
+      "category": "work",
+      "name": {
+        "zh": "森林季刊",
+        "en": "Editorial Forest"
+      },
+      "description": "森林绿配期刊式排版，适合季度复盘、年度报告和可持续发展主题",
+      "palette": {
+        "background": "2E4A2A",
+        "text": "EFE7D4",
+        "accent": "E89CB1",
+        "surface": "3A5A36",
+        "secondary": "E6DCC4",
+        "muted": "E6DCC4"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-engineering-blueprint",
+      "category": "work",
+      "name": {
+        "zh": "工程蓝图",
+        "en": "Engineering Blueprint"
+      },
+      "description": "纸张底色配工程网格和流程框，适合架构评审、技术方案和执行计划",
+      "palette": {
+        "background": "F0EAE0",
+        "surface": "E7E0D4",
+        "text": "252824",
+        "muted": "68665F",
+        "accent": "B5392A",
+        "secondary": "E7E0D4"
+      },
+      "pageCount": 12,
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "dsh-work-curated-modular-logistics-system",
+      "category": "work",
+      "name": {
+        "zh": "模块化物流",
+        "en": "Modular Logistics System"
+      },
+      "description": "模块化信息块和流程线，适合供应链、跨境履约和经营行动汇报",
+      "palette": {
+        "background": "F2F2EE",
+        "surface": "FFFFFF",
+        "text": "202224",
+        "muted": "60666A",
+        "accent": "FFD400",
+        "secondary": "AEB4B5"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-work-curated-nordic-operating-report",
+      "category": "work",
+      "name": {
+        "zh": "北欧经营报告",
+        "en": "Nordic Operating Report"
+      },
+      "description": "深蓝底配数据时间线，适合年度经营复盘、市场进入和管理层汇报",
+      "palette": {
+        "background": "F3F0EA",
+        "surface": "FFFFFF",
+        "text": "0B2A3A",
+        "muted": "657882",
+        "accent": "42C7E7",
+        "secondary": "E8B8A8"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-blue-professional",
+      "category": "business",
+      "name": {
+        "zh": "蓝色商务",
+        "en": "Blue Professional"
+      },
+      "description": "米白底配钴蓝强调色，适合经营分析、季度汇报和投资研究",
+      "palette": {
+        "background": "FDFAE7",
+        "text": "111111",
+        "accent": "1E2BFA",
+        "surface": "E9E8E0",
+        "secondary": "6B6B6B",
+        "muted": "6B6B6B"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-neo-grid-bold",
+      "category": "business",
+      "name": {
+        "zh": "荧光网格",
+        "en": "Neo-Grid Bold"
+      },
+      "description": "粗网格配高饱和撞色，适合产品发布、增长复盘和创意提案",
+      "palette": {
+        "background": "F5F4EF",
+        "text": "0A0A0A",
+        "accent": "E6FF3D",
+        "surface": "ECECE8",
+        "secondary": "8A8A85",
+        "muted": "8A8A85"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-cartesian",
+      "category": "consulting",
+      "name": {
+        "zh": "理性简报",
+        "en": "Cartesian"
+      },
+      "description": "坐标网格和克制配色，适合数据简报、策略分析和对比论证",
+      "palette": {
+        "background": "EDE8E0",
+        "text": "1A1A1A",
+        "accent": "8A8178",
+        "surface": "E2DBD1",
+        "secondary": "5A5A5A",
+        "muted": "5A5A5A"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-consulting-curated-swiss-signal-grid",
+      "category": "consulting",
+      "name": {
+        "zh": "瑞士网格",
+        "en": "Swiss Signal Grid"
+      },
+      "description": "瑞士网格排版，适合管理层数据汇报、市场洞察和模式对比",
+      "palette": {
+        "background": "F5F3EE",
+        "surface": "FFFFFF",
+        "text": "111111",
+        "muted": "6E6D68",
+        "accent": "E52333",
+        "secondary": "CBC8C0"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-signal",
+      "category": "consulting",
+      "name": {
+        "zh": "深蓝决策",
+        "en": "Signal"
+      },
+      "description": "深色底配醒目强调色，适合战略汇报、管理层决策和风险提示",
+      "palette": {
+        "background": "1C2644",
+        "text": "E2DCD0",
+        "accent": "C8A870",
+        "surface": "232F55",
+        "secondary": "8A96A8",
+        "muted": "8A96A8"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-course-workshop",
+      "category": "academic",
+      "name": {
+        "zh": "课程工作坊",
+        "en": "Course Workshop"
+      },
+      "description": "学习目标边栏、概念图和自测页，适合培训、课程和工作坊",
+      "palette": {
+        "background": "F7F4EB",
+        "surface": "E5EBDD",
+        "text": "243F35",
+        "muted": "70766B",
+        "accent": "447A62",
+        "secondary": "E5EBDD"
+      },
+      "pageCount": 12,
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "dsh-monochrome",
+      "category": "academic",
+      "name": {
+        "zh": "极简研究",
+        "en": "Monochrome"
+      },
+      "description": "米白底极简排版，适合用户研究、学术汇报和观点陈述",
+      "palette": {
+        "background": "FAFADF",
+        "text": "1A1A16",
+        "accent": "1A1A16",
+        "surface": "F2F2D2",
+        "secondary": "5E5E54",
+        "muted": "5E5E54"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-editorial-notebook",
+      "category": "editorial",
+      "name": {
+        "zh": "编辑笔记",
+        "en": "Editorial Notebook"
+      },
+      "description": "双栏论述、边注和决策矩阵，适合研究、观点和业务叙事",
+      "palette": {
+        "background": "F8F8F6",
+        "surface": "EDEBE5",
+        "text": "252320",
+        "muted": "76716A",
+        "accent": "A86043",
+        "secondary": "EDEBE5"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-soft-editorial",
+      "category": "editorial",
+      "name": {
+        "zh": "柔和编辑部",
+        "en": "Soft Editorial"
+      },
+      "description": "柔和底色配杂志式排版，适合品牌故事、内容策划和观点文章",
+      "palette": {
+        "background": "F2EEDF",
+        "text": "2A241B",
+        "accent": "E1A4C2",
+        "surface": "D6DD63",
+        "secondary": "E8C9B6",
+        "muted": "E8C9B6"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-broadside",
+      "category": "promotion",
+      "name": {
+        "zh": "橙黑宣言",
+        "en": "Broadside"
+      },
+      "description": "橙黑大字海报风格，适合活动宣传、发布会和宣言式表达",
+      "palette": {
+        "background": "111111",
+        "text": "F0ECE5",
+        "accent": "E85D26",
+        "surface": "282826",
+        "secondary": "888880",
+        "muted": "888880"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-playful",
+      "category": "promotion",
+      "name": {
+        "zh": "杏色创意",
+        "en": "Playful"
+      },
+      "description": "杏色暖调配轻松版式，适合创意提案、团队分享和活动介绍",
+      "palette": {
+        "background": "F0C8A0",
+        "text": "1A1A1A",
+        "accent": "1A1A1A",
+        "surface": "E8B88E",
+        "secondary": "F7DEC6",
+        "muted": "F7DEC6"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    },
+    {
+      "id": "dsh-sakura-chroma",
+      "category": "promotion",
+      "name": {
+        "zh": "复古彩带",
+        "en": "Sakura Chroma"
+      },
+      "description": "复古配色和彩带装饰，适合品牌宣传、节日活动和生活方式内容",
+      "palette": {
+        "background": "F1E6CB",
+        "text": "3A2516",
+        "accent": "E54489",
+        "surface": "E5D6B0",
+        "secondary": "F09131",
+        "muted": "F09131"
+      },
+      "pageCount": 12,
+      "license": "MIT"
+    }
+  ]
+}

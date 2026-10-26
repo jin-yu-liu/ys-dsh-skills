@@ -1,0 +1,6 @@
+{
+  "name": "dsh-skills-catalog",
+  "private": true,
+  "type": "module",
+  "scripts": { "validate": "node scripts/validate.mjs" }
+}

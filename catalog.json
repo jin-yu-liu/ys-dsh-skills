@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "version": "2026-10-26.1",
+  "skills": [
+    {
+      "id": "ppt",
+      "name": { "zh": "制作PPT", "en": "Slides" },
+      "description": { "zh": "根据主题或文档生成可编辑的演示文稿", "en": "Create editable slide decks from a topic or document" },
+      "icon": "📊",
+      "order": 10,
+      "default_pinned": true,
+      "status": "available",
+      "skill": {
+        "name": "dsh-ppt",
+        "path": "skills/dsh-ppt/SKILL.md",
+        "model_invocable": true,
+        "user_invocable": true
+      },
+      "presentation": { "catalog": "ppt/catalog.json" }
+    },
+    {
+      "id": "image",
+      "name": { "zh": "AI生图", "en": "AI Image" },
+      "description": { "zh": "文字生成图片（规划中）", "en": "Generate images from text (planned)" },
+      "icon": "🎨",
+      "order": 20,
+      "default_pinned": true,
+      "status": "placeholder"
+    },
+    {
+      "id": "video",
+      "name": { "zh": "AI生视频", "en": "AI Video" },
+      "description": { "zh": "文字或图片生成视频（规划中）", "en": "Generate video from text or images (planned)" },
+      "icon": "🎬",
+      "order": 30,
+      "default_pinned": true,
+      "status": "placeholder"
+    },
+    {
+      "id": "writing",
+      "name": { "zh": "长文写作", "en": "Writing" },
+      "description": { "zh": "公众号、报告等长文写作（规划中）", "en": "Long-form writing for articles and reports (planned)" },
+      "icon": "✍️",
+      "order": 40,
+      "default_pinned": false,
+      "status": "placeholder"
+    }
+  ]
+}
