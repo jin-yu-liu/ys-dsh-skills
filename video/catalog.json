@@ -99,12 +99,12 @@
       "id": "family-recipe-farewell",
       "category": "drama",
       "name": {
-        "zh": "妈妈的菜谱",
-        "en": "A Mother's Recipe"
+        "zh": "妈妈的菜谱，一代代传下去",
+        "en": "A Mother's Recipe, Handed Down"
       },
       "description": {
-        "zh": "亲情叙事：一张手写菜谱在母女两代间传下去",
-        "en": "Family story: a handwritten recipe passed down"
+        "zh": "一道菜、一间厨房、一张菜谱卡 —— 被教会、被学会、被传下去。时间靠季节 + 光线 + 菜谱卡变旧来推进；暖色调全片不变。结尾克制（规则 6）——空椅子和油渍菜谱卡替你哭，而不是闪回蒙太奇。",
+        "en": "one dish, one kitchen, one recipe card — taught, learned, and handed down. Time marked by season + light + the card aging; the warm grade never changes. Restrained ending (Rule 6) — the empty chair and the stained card do the crying, not a flashback montage."
       },
       "palette": {
         "background": "1F1D2B",
@@ -117,18 +117,101 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/family-recipe-farewell.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一道菜、一间厨房、一张菜谱卡 —— 被教会、被学会、被传下去。时间靠季节 + 光线 + 菜谱卡变旧来推进；暖色调全片不变。结尾克制（规则 6）——空椅子和油渍菜谱卡替你哭，而不是闪回蒙太奇。",
+          "en": "one dish, one kitchen, one recipe card — taught, learned, and handed down. Time marked by season + light + the card aging; the warm grade never changes. Restrained ending (Rule 6) — the empty chair and the stained card do the crying, not a flashback montage."
+        },
+        "storyboard": {
+          "zh": "7 个镜头，一生",
+          "en": "7 shots, one lifetime"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "分镜一",
+              "en": "Shot 1"
+            },
+            "title": {
+              "zh": "够不着台面（冬天，清晨）",
+              "en": "Too short to see (winter, morning)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜二",
+              "en": "Shot 2"
+            },
+            "title": {
+              "zh": "学着做（春天）",
+              "en": "Learning (spring)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜三",
+              "en": "Shot 3"
+            },
+            "title": {
+              "zh": "自己做（夏天）",
+              "en": "On their own (summer)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜四",
+              "en": "Shot 4"
+            },
+            "title": {
+              "zh": "并肩（秋天）",
+              "en": "Side by side (autumn)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜五",
+              "en": "Shot 5"
+            },
+            "title": {
+              "zh": "发抖的手（冬天，雨）",
+              "en": "Hands that shake (winter rain)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜六",
+              "en": "Shot 6"
+            },
+            "title": {
+              "zh": "空椅子（又一个春天）",
+              "en": "The empty chair (spring again)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜七",
+              "en": "Shot 7"
+            },
+            "title": {
+              "zh": "传下去（黄金时刻）",
+              "en": "Handed down (golden hour)"
+            }
+          }
+        ],
+        "variables": []
+      }
     },
     {
       "id": "found-footage-horror",
       "category": "drama",
       "name": {
-        "zh": "监控录像恐怖",
-        "en": "Found-footage Horror"
+        "zh": "监控录像 / 伪纪录恐怖",
+        "en": "CCTV / Found-Footage Horror"
       },
       "description": {
-        "zh": "劣质监控画面里的异常一瞬，伪纪录恐怖",
-        "en": "Something wrong caught on a cheap security camera"
+        "zh": "一台固定监控摄像头，对着夜里空无一人的走廊；有什么东西，微妙地、不对劲地反常。换掉地点，留住这份克制。",
+        "en": "a fixed security camera on an empty night corridor; something is subtly, wrongly off. Swap the location, keep the discipline."
       },
       "palette": {
         "background": "1F1D2B",
@@ -147,18 +230,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/found-footage-horror.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一台固定监控摄像头，对着夜里空无一人的走廊；有什么东西，微妙地、不对劲地反常。换掉地点，留住这份克制。",
+          "en": "a fixed security camera on an empty night corridor; something is subtly, wrongly off. Swap the location, keep the discipline."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–4s",
+              "en": "0–4s"
+            },
+            "title": {
+              "zh": "正常（建立无聊感）",
+              "en": "Normal (establish the boredom)"
+            }
+          },
+          {
+            "time": {
+              "zh": "4–7s",
+              "en": "4–7s"
+            },
+            "title": {
+              "zh": "不对劲（那个微小而具体的变化）",
+              "en": "Wrong (the small specific change)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "停住（克制收尾）",
+              "en": "Hold (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "place",
+              "en": "place"
+            },
+            "example": {
+              "zh": "凌晨 3 点空荡的办公室走廊",
+              "en": "an empty office corridor at 3 AM"
+            }
+          },
+          {
+            "name": {
+              "zh": "wrong_thing",
+              "en": "wrong_thing"
+            },
+            "example": {
+              "zh": "走廊尽头本来关着的门此刻开着",
+              "en": "a door at the end stands open that was shut"
+            }
+          },
+          {
+            "name": {
+              "zh": "cam_type",
+              "en": "cam_type"
+            },
+            "example": {
+              "zh": "天花板监控摄像头，广角 fisheye",
+              "en": "ceiling security camera, wide fisheye"
+            }
+          },
+          {
+            "name": {
+              "zh": "timestamp",
+              "en": "timestamp"
+            },
+            "example": {
+              "zh": "03:14:07 AM，右上角",
+              "en": "03:14:07 AM, top-right"
+            }
+          },
+          {
+            "name": {
+              "zh": "night_mode",
+              "en": "night_mode"
+            },
+            "example": {
+              "zh": "IR 夜视绿灰",
+              "en": "IR night-vision green-grey"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "micro-drama",
       "category": "drama",
       "name": {
         "zh": "竖屏短剧",
-        "en": "Vertical Micro-drama"
+        "en": "Vertical Micro-Drama (竖屏短剧)"
       },
       "description": {
-        "zh": "冷开钩子 + 正反打对峙 + 悬念结尾",
-        "en": "Cold-open hook, shot-reverse-shot clash, cliffhanger"
+        "zh": "一场两人之间剑拔弩张的对峙，冷开钩子开场，悬念剪断收尾。换掉冲突，留住结构。无 IP。",
+        "en": "a tense two-person confrontation with a cold-open hook and a cliffhanger cut. Swap the conflict, keep the structure. IP-free."
       },
       "palette": {
         "background": "1F1D2B",
@@ -177,18 +358,117 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/micro-drama.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一场两人之间剑拔弩张的对峙，冷开钩子开场，悬念剪断收尾。换掉冲突，留住结构。无 IP。",
+          "en": "a tense two-person confrontation with a cold-open hook and a cliffhanger cut. Swap the conflict, keep the structure. IP-free."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 12s——为钩子 + 悬念而搭",
+          "en": "3 beats, ~12s — built to hook + cliffhang"
+        },
+        "duration": {
+          "zh": "12s",
+          "en": "12s"
+        },
+        "aspect": "9:16",
+        "beats": [
+          {
+            "time": {
+              "zh": "0–2s",
+              "en": "0–2s"
+            },
+            "title": {
+              "zh": "冷开场（钩子——熬过那一划）",
+              "en": "Cold open (the hook — survive the swipe)"
+            }
+          },
+          {
+            "time": {
+              "zh": "2–8s",
+              "en": "2–8s"
+            },
+            "title": {
+              "zh": "对峙（shot-reverse-shot）",
+              "en": "Confrontation (shot-reverse-shot)"
+            }
+          },
+          {
+            "time": {
+              "zh": "8–12s",
+              "en": "8–12s"
+            },
+            "title": {
+              "zh": "悬念（没解答的反转）",
+              "en": "Cliffhanger (the unanswered turn)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "a",
+              "en": "a"
+            },
+            "example": {
+              "zh": "一个疲惫的年轻女子，职业装",
+              "en": "a tired young woman, office wear"
+            }
+          },
+          {
+            "name": {
+              "zh": "b",
+              "en": "b"
+            },
+            "example": {
+              "zh": "一个上了年纪的男人，名贵西装",
+              "en": "an older man, expensive suit"
+            }
+          },
+          {
+            "name": {
+              "zh": "hook",
+              "en": "hook"
+            },
+            "example": {
+              "zh": "她把一封辞职信拍在桌上",
+              "en": "she slaps a resignation letter on the desk"
+            }
+          },
+          {
+            "name": {
+              "zh": "conflict",
+              "en": "conflict"
+            },
+            "example": {
+              "zh": "「你早就知道。从头到尾。」",
+              "en": "\"You knew. The whole time.\""
+            }
+          },
+          {
+            "name": {
+              "zh": "cliff",
+              "en": "cliff"
+            },
+            "example": {
+              "zh": "他把一张照片推到她面前——她僵住",
+              "en": "he slides her a photo — she freezes"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "movie-trailer",
       "category": "drama",
       "name": {
-        "zh": "电影预告片",
-        "en": "Teaser Trailer"
+        "zh": "电影感预告片(层层升级的多镜剪辑)",
+        "en": "Cinematic Teaser Trailer (escalating multi-shot)"
       },
       "description": {
-        "zh": "层层升级的多镜蒙太奇，收在片名",
-        "en": "Escalating multi-shot montage ending on the title"
+        "zh": "一支科幻惊悚预告片——安静的建场、一个引爆点、层层升级的快切、一记硬切黑场、一拍标题。换掉世界,保住节奏。",
+        "en": "a sci-fi thriller teaser — quiet establishing, an inciting beat, escalation cuts, a smash to black, one title beat. Swap the world, keep the rhythm."
       },
       "palette": {
         "background": "1F1D2B",
@@ -207,18 +487,136 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/movie-trailer.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一支科幻惊悚预告片——安静的建场、一个引爆点、层层升级的快切、一记硬切黑场、一拍标题。换掉世界,保住节奏。",
+          "en": "a sci-fi thriller teaser — quiet establishing, an inciting beat, escalation cuts, a smash to black, one title beat. Swap the world, keep the rhythm."
+        },
+        "storyboard": {
+          "zh": "6 镜,约 15 秒",
+          "en": "6 shots, ~15s"
+        },
+        "duration": {
+          "zh": "15 秒",
+          "en": "15s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "Shot 1",
+              "en": "Shot 1"
+            },
+            "title": {
+              "zh": "建场(长镜久持,安静)",
+              "en": "Establish (long hold, quiet)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 2",
+              "en": "Shot 2"
+            },
+            "title": {
+              "zh": "主角(近景)",
+              "en": "The protagonist (close)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 3",
+              "en": "Shot 3"
+            },
+            "title": {
+              "zh": "引爆点(第一个 {{threat}} 的迹象)",
+              "en": "The inciting beat (the first sign of {{threat}})"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 4–5",
+              "en": "Shot 4–5"
+            },
+            "title": {
+              "zh": "升级(切点变短)",
+              "en": "Escalation (cuts shorten)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 6",
+              "en": "Shot 6"
+            },
+            "title": {
+              "zh": "硬切黑场 + 标题",
+              "en": "Smash to black + title"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "world",
+              "en": "world"
+            },
+            "example": {
+              "zh": "一座被海水淹没的近未来沿海城市",
+              "en": "a drowned near-future coastal city"
+            }
+          },
+          {
+            "name": {
+              "zh": "protagonist",
+              "en": "protagonist"
+            },
+            "example": {
+              "zh": "一名孤身的潜水工程师",
+              "en": "a lone diver-engineer"
+            }
+          },
+          {
+            "name": {
+              "zh": "threat",
+              "en": "threat"
+            },
+            "example": {
+              "zh": "水下某个庞然之物正在移动",
+              "en": "something vast moving under the water"
+            }
+          },
+          {
+            "name": {
+              "zh": "title_word",
+              "en": "title_word"
+            },
+            "example": {
+              "zh": "一个自造的单词标题,例如 \"TIDEBREAK\"",
+              "en": "one-word made-up title, e.g. \"TIDEBREAK\""
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "去饱和的钢蓝调",
+              "en": "desaturated steel-blue"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "car-commercial",
       "category": "commercial",
       "name": {
         "zh": "汽车广告",
-        "en": "Car Commercial"
+        "en": "Automotive / Car Commercial"
       },
       "description": {
-        "zh": "路面、光扫和车身细节驱动的汽车大片",
-        "en": "Road, light sweeps and body details sell the car"
+        "zh": "一辆轿跑在黄昏的海岸公路上飞驰，光带掠过车身。换掉车和路，把「车身/光线」的纪律保留下来。",
+        "en": "a coupe carving a coastal road at dusk, light streaking across the bodywork. Swap the car and road, keep the surface/light discipline."
       },
       "palette": {
         "background": "F3F4F6",
@@ -237,18 +635,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/car-commercial.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一辆轿跑在黄昏的海岸公路上飞驰，光带掠过车身。换掉车和路，把「车身/光线」的纪律保留下来。",
+          "en": "a coupe carving a coastal road at dusk, light streaking across the bodywork. Swap the car and road, keep the surface/light discipline."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "车身（在倒影中揭示）",
+              "en": "Surface (the reveal in reflection)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "运动（车在路上活起来）",
+              "en": "Motion (the car alive on the road)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "主角定格（克制收尾）",
+              "en": "Hero rest (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "car",
+              "en": "car"
+            },
+            "example": {
+              "zh": "一辆低趴的哑光灰轿跑",
+              "en": "a low matte-grey coupe"
+            }
+          },
+          {
+            "name": {
+              "zh": "road",
+              "en": "road"
+            },
+            "example": {
+              "zh": "黄昏的悬崖海岸公路",
+              "en": "a cliff coastal road at dusk"
+            }
+          },
+          {
+            "name": {
+              "zh": "surface",
+              "en": "surface"
+            },
+            "example": {
+              "zh": "带柔和光泽的哑光漆面",
+              "en": "matte paint with a soft sheen"
+            }
+          },
+          {
+            "name": {
+              "zh": "light_sweep",
+              "en": "light_sweep"
+            },
+            "example": {
+              "zh": "一道暖阳光带掠过车身",
+              "en": "a band of warm sun raking along the body"
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "暖黄昏金 + 冷调阴影",
+              "en": "warm dusk gold + cool shadow"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "product-commercial",
       "category": "commercial",
       "name": {
-        "zh": "产品硬广",
-        "en": "Product Hero Ad"
+        "zh": "产品广告 / 主打硬广（节拍驱动）",
+        "en": "Product Commercial / Hero Ad (beat-driven)"
       },
       "description": {
-        "zh": "按节拍切的产品主视觉广告",
-        "en": "Beat-driven hero shots of one product"
+        "zh": "一支机械腕表的主打硬广，在洒满阳光的桌面上做触感十足的微距揭示。把产品换掉，你就得到一副通用的广告骨架。",
+        "en": "a mechanical wristwatch hero ad, macro tactile reveal on a sunlit tabletop. Swap the product and you have a generic ad skeleton."
       },
       "palette": {
         "background": "F3F4F6",
@@ -267,18 +763,126 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/product-commercial.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一支机械腕表的主打硬广，在洒满阳光的桌面上做触感十足的微距揭示。把产品换掉，你就得到一副通用的广告骨架。",
+          "en": "a mechanical wristwatch hero ad, macro tactile reveal on a sunlit tabletop. Swap the product and you have a generic ad skeleton."
+        },
+        "storyboard": {
+          "zh": "4 节拍，约 10s",
+          "en": "4 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–2s",
+              "en": "0–2s"
+            },
+            "title": {
+              "zh": "建立（静置的物件）",
+              "en": "Establish (the object at rest)"
+            }
+          },
+          {
+            "time": {
+              "zh": "2–5s",
+              "en": "2–5s"
+            },
+            "title": {
+              "zh": "触碰（人手接触，不完整露脸）",
+              "en": "The touch (human contact, no full reveal of a face)"
+            }
+          },
+          {
+            "time": {
+              "zh": "5–8s",
+              "en": "5–8s"
+            },
+            "title": {
+              "zh": "细节（微距收益）",
+              "en": "The detail (macro payoff)"
+            }
+          },
+          {
+            "time": {
+              "zh": "8–10s",
+              "en": "8–10s"
+            },
+            "title": {
+              "zh": "安定（克制收尾）",
+              "en": "Settle (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "product",
+              "en": "product"
+            },
+            "example": {
+              "zh": "一支机械腕表",
+              "en": "a mechanical wristwatch"
+            }
+          },
+          {
+            "name": {
+              "zh": "material",
+              "en": "material"
+            },
+            "example": {
+              "zh": "拉丝钢表壳、蓝宝石镜面",
+              "en": "brushed steel case, sapphire crystal"
+            }
+          },
+          {
+            "name": {
+              "zh": "hero_action",
+              "en": "hero_action"
+            },
+            "example": {
+              "zh": "上紧表冠，秒针扫过",
+              "en": "the crown is wound, the second hand sweeps"
+            }
+          },
+          {
+            "name": {
+              "zh": "surface",
+              "en": "surface"
+            },
+            "example": {
+              "zh": "深胡桃木桌面",
+              "en": "dark walnut tabletop"
+            }
+          },
+          {
+            "name": {
+              "zh": "accent_color",
+              "en": "accent_color"
+            },
+            "example": {
+              "zh": "暖琥珀色",
+              "en": "warm amber"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "animal-vlog",
       "category": "pets",
       "name": {
-        "zh": "会说话的动物 Vlog",
-        "en": "Talking Animal Vlog"
+        "zh": "会说话的动物 VLog（自拍 POV）",
+        "en": "Talking Animal VLog (selfie POV)"
       },
       "description": {
-        "zh": "萌宠自拍视角讲段子",
-        "en": "A pet films itself and delivers a punchline"
+        "zh": "一只腿短的柯基为自己的早晨做 VLog，对着镜头讲个不停。换掉动物和段子，保留结构即可。",
+        "en": "a stubby corgi vlogs its morning, talking to the camera. Swap the animal and the bit, keep the structure."
       },
       "palette": {
         "background": "FFF4E6",
@@ -297,18 +901,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/animal-vlog.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一只腿短的柯基为自己的早晨做 VLog，对着镜头讲个不停。换掉动物和段子，保留结构即可。",
+          "en": "a stubby corgi vlogs its morning, talking to the camera. Swap the animal and the bit, keep the structure."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "开场 / 打招呼",
+              "en": "Cold open / greeting"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "段子 / B-roll",
+              "en": "The bit / B-roll"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "包袱 / 收尾",
+              "en": "Punchline / sign-off"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "animal",
+              "en": "animal"
+            },
+            "example": {
+              "zh": "一只橙白相间、腿短的柯基",
+              "en": "a stubby orange-and-white corgi"
+            }
+          },
+          {
+            "name": {
+              "zh": "voice",
+              "en": "voice"
+            },
+            "example": {
+              "zh": "温暖、略带憨气、语速快",
+              "en": "warm, slightly goofy, fast"
+            }
+          },
+          {
+            "name": {
+              "zh": "setting",
+              "en": "setting"
+            },
+            "example": {
+              "zh": "洒满阳光的厨房，随后是后院",
+              "en": "a sunny kitchen, then the back yard"
+            }
+          },
+          {
+            "name": {
+              "zh": "bit",
+              "en": "bit"
+            },
+            "example": {
+              "zh": "像美食评论家一样点评早餐",
+              "en": "reviewing breakfast like a food critic"
+            }
+          },
+          {
+            "name": {
+              "zh": "punchline",
+              "en": "punchline"
+            },
+            "example": {
+              "zh": "说到一半被掉落的零食岔了神",
+              "en": "gets distracted mid-sentence by a dropped treat"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "elderly-cat-companion",
       "category": "pets",
       "name": {
-        "zh": "奶奶与猫",
-        "en": "Grandmother & Cat"
+        "zh": "留下来的那个（奶奶与猫）",
+        "en": "The One Who Stayed (Grandmother & Cat)"
       },
       "description": {
-        "zh": "留下来的那只猫，安静的陪伴叙事",
-        "en": "A quiet story of the cat that stayed"
+        "zh": "痛点是孤独（空巢的奶奶、一部沉默的手机）；猫是留下来的那个。时间靠季节 +光线 + 墙上的照片来推进；暖色调全片不变。结尾克制（规则 6）—— 窗台上的猫和椅背上的开衫替你哭。",
+        "en": "the ache is solitude (an empty-nest grandmother, a silent phone); the cat is the one who stays. Time marked by season + light + the photos on the wall; the warm grade never changes. Restrained ending (Rule 6) — the cat on the windowsill and the cardigan over the chair do the crying."
       },
       "palette": {
         "background": "FFF4E6",
@@ -321,18 +1023,101 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/elderly-cat-companion.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "痛点是孤独（空巢的奶奶、一部沉默的手机）；猫是留下来的那个。时间靠季节 +光线 + 墙上的照片来推进；暖色调全片不变。结尾克制（规则 6）—— 窗台上的猫和椅背上的开衫替你哭。",
+          "en": "the ache is solitude (an empty-nest grandmother, a silent phone); the cat is the one who stays. Time marked by season + light + the photos on the wall; the warm grade never changes. Restrained ending (Rule 6) — the cat on the windowsill and the cardigan over the chair do the crying."
+        },
+        "storyboard": {
+          "zh": "7 个镜头",
+          "en": "7 shots"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "分镜一",
+              "en": "Shot 1"
+            },
+            "title": {
+              "zh": "门口（秋天黄昏）",
+              "en": "At the door (autumn dusk)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜二",
+              "en": "Shot 2"
+            },
+            "title": {
+              "zh": "放它进来（冬天）",
+              "en": "Letting it in (winter)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜三",
+              "en": "Shot 3"
+            },
+            "title": {
+              "zh": "沉默的手机（春天）",
+              "en": "The silent phone (spring)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜四",
+              "en": "Shot 4"
+            },
+            "title": {
+              "zh": "一起等（夏天）",
+              "en": "Waiting together (summer)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜五",
+              "en": "Shot 5"
+            },
+            "title": {
+              "zh": "慢下来（又一个秋天）",
+              "en": "Slowing down (autumn again)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜六",
+              "en": "Shot 6"
+            },
+            "title": {
+              "zh": "椅背上的开衫（冬天）",
+              "en": "The cardigan on the chair (winter)"
+            }
+          },
+          {
+            "time": {
+              "zh": "分镜七",
+              "en": "Shot 7"
+            },
+            "title": {
+              "zh": "院门口的人（黄金时刻）",
+              "en": "Someone at the gate (golden hour)"
+            }
+          }
+        ],
+        "variables": []
+      }
     },
     {
       "id": "pet-lifetime-narrative",
       "category": "pets",
       "name": {
-        "zh": "萌宠一生的陪伴",
-        "en": "A Pet’s Lifetime"
+        "zh": "萌宠 × 亲情，跨越一生的陪伴",
+        "en": "Pet × Family, A Lifetime of Companionship"
       },
       "description": {
-        "zh": "跨越一生的萌宠与家人的情感短片",
-        "en": "A pet and a family across a lifetime"
+        "zh": "一只狗，从笨拙奶狗到老去，陪着一个人走过一生。单一主体贯穿；时间靠季节+光线标记，绝不靠改色调。结尾克制（Rule 6）。",
+        "en": "one dog, from clumsy puppy to old age, across a person's whole life. Single subject throughout; time marked by season + light, never by changing the color grade. Restrained ending (Rule 6)."
       },
       "palette": {
         "background": "FFF4E6",
@@ -345,18 +1130,101 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/pet-lifetime-narrative.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一只狗，从笨拙奶狗到老去，陪着一个人走过一生。单一主体贯穿；时间靠季节+光线标记，绝不靠改色调。结尾克制（Rule 6）。",
+          "en": "one dog, from clumsy puppy to old age, across a person's whole life. Single subject throughout; time marked by season + light, never by changing the color grade. Restrained ending (Rule 6)."
+        },
+        "storyboard": {
+          "zh": "7 镜，跨越一生",
+          "en": "7 shots, one lifetime"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "镜 1",
+              "en": "Shot 1"
+            },
+            "title": {
+              "zh": "第一天（初春）",
+              "en": "First day (early spring)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 2",
+              "en": "Shot 2"
+            },
+            "title": {
+              "zh": "一起长大（盛夏）",
+              "en": "Growing up (summer)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 3",
+              "en": "Shot 3"
+            },
+            "title": {
+              "zh": "守候（秋）",
+              "en": "Waiting (autumn)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 4",
+              "en": "Shot 4"
+            },
+            "title": {
+              "zh": "长夜（冬雨）",
+              "en": "The long night (winter rain)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 5",
+              "en": "Shot 5"
+            },
+            "title": {
+              "zh": "慢下来（又一春）",
+              "en": "Slowing down (spring again)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 6",
+              "en": "Shot 6"
+            },
+            "title": {
+              "zh": "空着的位置（夏末黄昏）",
+              "en": "The empty spot (summer dusk)"
+            }
+          },
+          {
+            "time": {
+              "zh": "镜 7",
+              "en": "Shot 7"
+            },
+            "title": {
+              "zh": "结尾（黄金时刻）",
+              "en": "Closing (golden hour)"
+            }
+          }
+        ],
+        "variables": []
+      }
     },
     {
       "id": "food-asmr",
       "category": "food",
       "name": {
-        "zh": "美食 ASMR",
-        "en": "Food ASMR"
+        "zh": "美食 ASMR / 感官特写",
+        "en": "Food ASMR / Sensory Close-up"
       },
       "description": {
-        "zh": "声音和质感驱动的美食特写",
-        "en": "Sound- and texture-led food close-ups"
+        "zh": "切开一块刚煎好的牛排，极限微距，清脆的同步拟音。换掉这道菜，你就得到一副可复用的美食 ASMR 骨架。",
+        "en": "cutting into a just-seared steak, extreme macro, crisp synced foley. Swap the dish and you have a reusable food-ASMR skeleton."
       },
       "palette": {
         "background": "FFF1E6",
@@ -375,18 +1243,126 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/food-asmr.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "切开一块刚煎好的牛排，极限微距，清脆的同步拟音。换掉这道菜，你就得到一副可复用的美食 ASMR 骨架。",
+          "en": "cutting into a just-seared steak, extreme macro, crisp synced foley. Swap the dish and you have a reusable food-ASMR skeleton."
+        },
+        "storyboard": {
+          "zh": "4–5 拍，约 10s",
+          "en": "4–5 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–2s",
+              "en": "0–2s"
+            },
+            "title": {
+              "zh": "期待",
+              "en": "Anticipation"
+            }
+          },
+          {
+            "time": {
+              "zh": "2–4s",
+              "en": "2–4s"
+            },
+            "title": {
+              "zh": "接触",
+              "en": "Contact"
+            }
+          },
+          {
+            "time": {
+              "zh": "4–7s",
+              "en": "4–7s"
+            },
+            "title": {
+              "zh": "切开 / 让开",
+              "en": "The cut / the give"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "收",
+              "en": "Settle"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "dish",
+              "en": "dish"
+            },
+            "example": {
+              "zh": "一块厚切、刚煎好的牛排",
+              "en": "a thick just-seared steak"
+            }
+          },
+          {
+            "name": {
+              "zh": "tool",
+              "en": "tool"
+            },
+            "example": {
+              "zh": "一把沉手的主厨刀",
+              "en": "a heavy chef's knife"
+            }
+          },
+          {
+            "name": {
+              "zh": "key_sound",
+              "en": "key_sound"
+            },
+            "example": {
+              "zh": "脆皮爆裂声 + 刀切声",
+              "en": "crust crackle + knife slice"
+            }
+          },
+          {
+            "name": {
+              "zh": "texture",
+              "en": "texture"
+            },
+            "example": {
+              "zh": "焦脆外壳、粉嫩中心、流出的肉汁",
+              "en": "charred crust, pink centre, juice"
+            }
+          },
+          {
+            "name": {
+              "zh": "ambient",
+              "en": "ambient"
+            },
+            "example": {
+              "zh": "安静的厨房，微弱的滋滋声",
+              "en": "a quiet kitchen, faint sizzle"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "drone-fpv",
       "category": "travel",
       "name": {
-        "zh": "无人机 FPV",
-        "en": "Drone / FPV"
+        "zh": "无人机 / FPV 航拍",
+        "en": "Drone / FPV Aerial"
       },
       "description": {
-        "zh": "穿越缝隙、最后揭示全景的航拍",
-        "en": "Fly through a gap, then reveal the vista"
+        "zh": "一架 FPV 无人机贴地起飞，俯冲穿过峡谷，再拉升揭露远方全景。换掉地点，保留连续运镜。",
+        "en": "an FPV drone launches low, dives through a canyon, and pulls up to reveal a vista. Swap the location, keep the continuous move."
       },
       "palette": {
         "background": "E7F5FF",
@@ -405,18 +1381,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/drone-fpv.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一架 FPV 无人机贴地起飞，俯冲穿过峡谷，再拉升揭露远方全景。换掉地点，保留连续运镜。",
+          "en": "an FPV drone launches low, dives through a canyon, and pulls up to reveal a vista. Swap the location, keep the continuous move."
+        },
+        "storyboard": {
+          "zh": "一镜连续运镜，约 10s",
+          "en": "one continuous move, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "起飞 / 贴地（先在低空确立尺度）",
+              "en": "Launch / low (establish scale low to the ground)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "穿越（身临其境的中段——贴近）",
+              "en": "Through (the visceral middle — proximity)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "拉升揭露（高潮回报）",
+              "en": "Pull-up reveal (the payoff)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "subject",
+              "en": "subject"
+            },
+            "example": {
+              "zh": "一道深红岩峡谷，谷底有河",
+              "en": "a deep red-rock canyon with a river"
+            }
+          },
+          {
+            "name": {
+              "zh": "move",
+              "en": "move"
+            },
+            "example": {
+              "zh": "低空俯冲 → 穿越峡谷 → 拉升揭露",
+              "en": "low dive → fly-through the gorge → pull-up reveal"
+            }
+          },
+          {
+            "name": {
+              "zh": "gap",
+              "en": "gap"
+            },
+            "example": {
+              "zh": "岩壁间一道狭缝",
+              "en": "a narrow slot between rock walls"
+            }
+          },
+          {
+            "name": {
+              "zh": "reveal",
+              "en": "reveal"
+            },
+            "example": {
+              "zh": "日出时豁然展开的辽阔山谷",
+              "en": "a vast valley opening at sunrise"
+            }
+          },
+          {
+            "name": {
+              "zh": "light",
+              "en": "light"
+            },
+            "example": {
+              "zh": "低角度金色日出，长影，薄雾",
+              "en": "low golden sunrise, long shadows, haze"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "nature-timelapse",
       "category": "travel",
       "name": {
-        "zh": "风光延时",
-        "en": "Nature Timelapse"
+        "zh": "自然 / 风光延时",
+        "en": "Nature / Landscape Timelapse"
       },
       "description": {
-        "zh": "光线和天色随时间流动的风光延时",
-        "en": "Light and sky moving over a landscape"
+        "zh": "一座山谷，从黎明前到入夜，云在奔流，影在横扫。换个地点，把时间压缩的规则留住。",
+        "en": "a mountain valley from pre-dawn to night, clouds streaming, shadows sweeping. Swap the location, keep the time-compression rules."
       },
       "palette": {
         "background": "E7F5FF",
@@ -435,18 +1509,126 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/nature-timelapse.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一座山谷，从黎明前到入夜，云在奔流，影在横扫。换个地点，把时间压缩的规则留住。",
+          "en": "a mountain valley from pre-dawn to night, clouds streaming, shadows sweeping. Swap the location, keep the time-compression rules."
+        },
+        "storyboard": {
+          "zh": "4 拍 = 一天，约 12s",
+          "en": "4 beats = one day, ~12s"
+        },
+        "duration": {
+          "zh": "12s",
+          "en": "12s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "黎明前（{{grade}} 最冷的时刻）",
+              "en": "Pre-dawn ({{grade}} at its coolest)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–6s",
+              "en": "3–6s"
+            },
+            "title": {
+              "zh": "日出 → 正午",
+              "en": "Sunrise → midday"
+            }
+          },
+          {
+            "time": {
+              "zh": "6–9s",
+              "en": "6–9s"
+            },
+            "title": {
+              "zh": "下午 → 黄昏",
+              "en": "Afternoon → dusk"
+            }
+          },
+          {
+            "time": {
+              "zh": "9–12s",
+              "en": "9–12s"
+            },
+            "title": {
+              "zh": "黄昏 → 夜晚（克制收尾）",
+              "en": "Dusk → night (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "place",
+              "en": "place"
+            },
+            "example": {
+              "zh": "一处高山谷地",
+              "en": "a high alpine valley"
+            }
+          },
+          {
+            "name": {
+              "zh": "time_arc",
+              "en": "time_arc"
+            },
+            "example": {
+              "zh": "黎明前 → 正午 → 黄昏 → 夜晚",
+              "en": "pre-dawn → midday → dusk → night"
+            }
+          },
+          {
+            "name": {
+              "zh": "motion",
+              "en": "motion"
+            },
+            "example": {
+              "zh": "云在奔流、影在横扫",
+              "en": "clouds streaming, shadows sweeping"
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "冷调黎明蓝转暖为金",
+              "en": "cool dawn blue warming to gold"
+            }
+          },
+          {
+            "name": {
+              "zh": "foreground",
+              "en": "foreground"
+            },
+            "example": {
+              "zh": "一棵被风吹弯的孤松",
+              "en": "a lone wind-bent pine"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "travel-vlog",
       "category": "travel",
       "name": {
-        "zh": "旅行 Vlog",
-        "en": "Travel Vlog"
+        "zh": "旅行 Vlog / 在地感",
+        "en": "Travel Vlog / Sense of Place"
       },
       "description": {
-        "zh": "大景、细节、人物拼出在地感",
-        "en": "Wides, details and people build a sense of place"
+        "zh": "海边老城的一个清晨。把目的地换掉，蒙太奇的纪律保留。",
+        "en": "a morning in a coastal old town. Swap the destination, keep the montage discipline."
       },
       "palette": {
         "background": "E7F5FF",
@@ -465,18 +1647,126 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/travel-vlog.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "海边老城的一个清晨。把目的地换掉，蒙太奇的纪律保留。",
+          "en": "a morning in a coastal old town. Swap the destination, keep the montage discipline."
+        },
+        "storyboard": {
+          "zh": "4 镜，约 12 秒",
+          "en": "4 shots, ~12s"
+        },
+        "duration": {
+          "zh": "12 秒",
+          "en": "12s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "Shot 1",
+              "en": "Shot 1"
+            },
+            "title": {
+              "zh": "Arrive（wide，起势）",
+              "en": "Arrive (wide, establish)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 2",
+              "en": "Shot 2"
+            },
+            "title": {
+              "zh": "Detail（具体起来）",
+              "en": "Detail (get specific)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 3",
+              "en": "Shot 3"
+            },
+            "title": {
+              "zh": "People（这个地方是活的）",
+              "en": "People (the place is alive)"
+            }
+          },
+          {
+            "time": {
+              "zh": "Shot 4",
+              "en": "Shot 4"
+            },
+            "title": {
+              "zh": "Move（把我们带进去）",
+              "en": "Move (put us there)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "place",
+              "en": "place"
+            },
+            "example": {
+              "zh": "清晨的海边老城",
+              "en": "a coastal old town at morning"
+            }
+          },
+          {
+            "name": {
+              "zh": "wide",
+              "en": "wide"
+            },
+            "example": {
+              "zh": "太阳升过瓦顶屋脊与海面",
+              "en": "sun rising over tiled rooftops and the sea"
+            }
+          },
+          {
+            "name": {
+              "zh": "detail",
+              "en": "detail"
+            },
+            "example": {
+              "zh": "街边煎锅冒起的热气、墙头一只猫",
+              "en": "steam off a street-food griddle, a cat on a wall"
+            }
+          },
+          {
+            "name": {
+              "zh": "people",
+              "en": "people"
+            },
+            "example": {
+              "zh": "摊主在笑、孩子追跑过巷子",
+              "en": "a vendor laughing, kids running an alley"
+            }
+          },
+          {
+            "name": {
+              "zh": "traveler",
+              "en": "traveler"
+            },
+            "example": {
+              "zh": "Vlogger，只从背后一闪而过",
+              "en": "the vlogger, seen briefly from behind"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "dance",
       "category": "music",
       "name": {
-        "zh": "舞蹈短片",
-        "en": "Dance Film"
+        "zh": "舞蹈 / 编舞影片",
+        "en": "Dance / Choreography Film"
       },
       "description": {
-        "zh": "为编舞服务的运镜和空间",
-        "en": "Camera and space in service of choreography"
+        "zh": "一名独舞的当代舞者，在一座空旷大厅里，一镜流畅到底。换风格、换空间都行，但守住「身体连续」这条规矩。",
+        "en": "a solo contemporary dancer in an empty hall, one flowing take. Swap the style and space, keep the continuous-body rule."
       },
       "palette": {
         "background": "2B1238",
@@ -495,18 +1785,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/dance.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一名独舞的当代舞者，在一座空旷大厅里，一镜流畅到底。换风格、换空间都行，但守住「身体连续」这条规矩。",
+          "en": "a solo contemporary dancer in an empty hall, one flowing take. Swap the style and space, keep the continuous-body rule."
+        },
+        "storyboard": {
+          "zh": "一镜到底，约 12s",
+          "en": "one continuous take, ~12s"
+        },
+        "duration": {
+          "zh": "12s",
+          "en": "12s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "Entry（建立身体 + 空间）",
+              "en": "Entry (establish body + space)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–9s",
+              "en": "3–9s"
+            },
+            "title": {
+              "zh": "The phrase（{{move}} —— 身体的陈述）",
+              "en": "The phrase ({{move}} — the body's argument)"
+            }
+          },
+          {
+            "time": {
+              "zh": "9–12s",
+              "en": "9–12s"
+            },
+            "title": {
+              "zh": "Resolve（克制收尾）",
+              "en": "Resolve (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "dancer",
+              "en": "dancer"
+            },
+            "example": {
+              "zh": "一名独舞的当代舞者",
+              "en": "a solo contemporary dancer"
+            }
+          },
+          {
+            "name": {
+              "zh": "style_tempo",
+              "en": "style_tempo"
+            },
+            "example": {
+              "zh": "流畅当代舞，~90 BPM，渐强",
+              "en": "fluid contemporary, ~90 BPM, building"
+            }
+          },
+          {
+            "name": {
+              "zh": "space",
+              "en": "space"
+            },
+            "example": {
+              "zh": "一座洒满阳光的空旷水泥大厅",
+              "en": "an empty sunlit concrete hall"
+            }
+          },
+          {
+            "name": {
+              "zh": "move",
+              "en": "move"
+            },
+            "example": {
+              "zh": "一段由地面盘旋而起的舞句",
+              "en": "a spiralling floor-to-rise phrase"
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "暖色硬窗光，长长的影子",
+              "en": "warm hard window light, long shadows"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "music-video",
       "category": "music",
       "name": {
-        "zh": "音乐 MV",
-        "en": "Music Video"
+        "zh": "音乐 MV / 表演（卡点剪辑）",
+        "en": "Music Video / Performance (beat-synced)"
       },
       "description": {
-        "zh": "按节拍卡点剪辑的表演 MV",
-        "en": "Beat-synced performance cuts"
+        "zh": "一位表演者置身风格化空间,跟着一首曲子的节奏剪辑。换掉艺人、视觉风格、节奏即可;保留卡点剪辑的纪律。",
+        "en": "a single performer in a stylised space, cut to a track's rhythm. Swap the artist, look, and tempo; keep the beat-sync discipline."
       },
       "palette": {
         "background": "2B1238",
@@ -525,18 +1913,117 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/music-video.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一位表演者置身风格化空间,跟着一首曲子的节奏剪辑。换掉艺人、视觉风格、节奏即可;保留卡点剪辑的纪律。",
+          "en": "a single performer in a stylised space, cut to a track's rhythm. Swap the artist, look, and tempo; keep the beat-sync discipline."
+        },
+        "storyboard": {
+          "zh": "卡点剪辑，约 12s",
+          "en": "beat-synced, ~12s"
+        },
+        "duration": {
+          "zh": "12s",
+          "en": "12s"
+        },
+        "aspect": "16:9",
+        "beats": [
+          {
+            "time": {
+              "zh": "0–4s",
+              "en": "0–4s"
+            },
+            "title": {
+              "zh": "Intro / verse（让它呼吸）",
+              "en": "Intro / verse (let it breathe)"
+            }
+          },
+          {
+            "time": {
+              "zh": "4–8s",
+              "en": "4–8s"
+            },
+            "title": {
+              "zh": "Hook / drop（{{hook_moment}} —— 兑现的高潮）",
+              "en": "Hook / drop ({{hook_moment}} — the payoff)"
+            }
+          },
+          {
+            "time": {
+              "zh": "8–12s",
+              "en": "8–12s"
+            },
+            "title": {
+              "zh": "Outro（克制收尾）",
+              "en": "Outro (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "artist",
+              "en": "artist"
+            },
+            "example": {
+              "zh": "一位独唱歌手",
+              "en": "a solo singer"
+            }
+          },
+          {
+            "name": {
+              "zh": "genre_tempo",
+              "en": "genre_tempo"
+            },
+            "example": {
+              "zh": "梦幻 synth-pop,~100 BPM,中等能量",
+              "en": "dreamy synth-pop, ~100 BPM, mid-energy"
+            }
+          },
+          {
+            "name": {
+              "zh": "look",
+              "en": "look"
+            },
+            "example": {
+              "zh": "夜晚屋顶,霓虹照亮的雨",
+              "en": "neon-lit rain on a rooftop at night"
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "品红 + 青在深蓝之上的霓虹色",
+              "en": "magenta + cyan neon over deep blue"
+            }
+          },
+          {
+            "name": {
+              "zh": "hook_moment",
+              "en": "hook_moment"
+            },
+            "example": {
+              "zh": "约第 4 秒副歌爆发那一刻",
+              "en": "the chorus drop at ~4s"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "fashion-film",
       "category": "fashion",
       "name": {
-        "zh": "时尚大片",
-        "en": "Fashion Film"
+        "zh": "时尚片 / 编辑大片 Look Book",
+        "en": "Fashion Film / Editorial Look Book"
       },
       "description": {
-        "zh": "面料动态与布光主导的 Look Book",
-        "en": "Fabric motion and light lead the look book"
+        "zh": "一位模特穿着飘逸长外套，布料在受控的风中运动，按高端时尚大片的方式拍。换个造型，节奏照旧。",
+        "en": "a model in a flowing coat, fabric moving in a controlled wind, shot like a high-fashion editorial. Swap the look, keep the rhythm."
       },
       "palette": {
         "background": "F8F0EC",
@@ -555,18 +2042,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/fashion-film.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一位模特穿着飘逸长外套，布料在受控的风中运动，按高端时尚大片的方式拍。换个造型，节奏照旧。",
+          "en": "a model in a flowing coat, fabric moving in a controlled wind, shot like a high-fashion editorial. Swap the look, keep the rhythm."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "质感（细节卖布料）",
+              "en": "Texture (the detail sells the fabric)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "运动（运动中的服装）",
+              "en": "Movement (the garment in motion)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "编辑式定格（克制收尾近景）",
+              "en": "The editorial hold (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "model",
+              "en": "model"
+            },
+            "example": {
+              "zh": "一位穿着廓形长外套的模特",
+              "en": "a model in a long structured coat"
+            }
+          },
+          {
+            "name": {
+              "zh": "fabric_motion",
+              "en": "fabric_motion"
+            },
+            "example": {
+              "zh": "外套在缓风中扫动",
+              "en": "the coat sweeping in a slow wind"
+            }
+          },
+          {
+            "name": {
+              "zh": "set",
+              "en": "set"
+            },
+            "example": {
+              "zh": "只有一扇硬光窗户的空旷水泥摄影棚",
+              "en": "a bare concrete studio with one hard window"
+            }
+          },
+          {
+            "name": {
+              "zh": "light",
+              "en": "light"
+            },
+            "example": {
+              "zh": "高窗一道硬主光，深重阴影",
+              "en": "one hard key from a high window, deep shadow"
+            }
+          },
+          {
+            "name": {
+              "zh": "grade",
+              "en": "grade"
+            },
+            "example": {
+              "zh": "低饱和、肤色偏暖",
+              "en": "desaturated with warm skin"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "15s-transformation",
       "category": "action",
       "name": {
-        "zh": "15 秒变身",
-        "en": "15s Transformation"
+        "zh": "15 秒变身模板（去 IP 通用版）",
+        "en": "15-Second Transformation Template (IP-stripped, generalized)"
       },
       "description": {
-        "zh": "一镜到底的变身特效，去 IP 通用骨架",
-        "en": "One-take transformation, IP-free skeleton"
+        "zh": "从《蟑螂侠/火焰恶魔/雷龙/麋鹿/紫鸢》5 个变体里抽出来的通用骨架。",
+        "en": "This is the generalized skeleton extracted from five of his Kamen Rider variants — Cockroach Rider, Fire Demon, Thunder Dragon, Rainbow Elk, Violet Hawk Valkyrie."
       },
       "palette": {
         "background": "0B1220",
@@ -588,18 +2173,107 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/15s-transformation.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "从《蟑螂侠/火焰恶魔/雷龙/麋鹿/紫鸢》5 个变体里抽出来的通用骨架。",
+          "en": "This is the generalized skeleton extracted from five of his Kamen Rider variants — Cockroach Rider, Fire Demon, Thunder Dragon, Rainbow Elk, Violet Hawk Valkyrie."
+        },
+        "beats": [],
+        "variables": [
+          {
+            "name": {
+              "zh": "核心配色",
+              "en": "color_core"
+            },
+            "example": {
+              "zh": "暗红色",
+              "en": "dark red"
+            }
+          },
+          {
+            "name": {
+              "zh": "道具材质",
+              "en": "base_material"
+            },
+            "example": {
+              "zh": "哑光黑色皮质长风衣",
+              "en": "matte black leather long trench coat"
+            }
+          },
+          {
+            "name": {
+              "zh": "腰带核心",
+              "en": "belt_crystal"
+            },
+            "example": {
+              "zh": "暗红色水晶",
+              "en": "dark red crystal"
+            }
+          },
+          {
+            "name": {
+              "zh": "触发词",
+              "en": "trigger"
+            },
+            "example": {
+              "zh": "低语「HENSHIN」",
+              "en": "whispered \"HENSHIN\""
+            }
+          },
+          {
+            "name": {
+              "zh": "眼球光色",
+              "en": "eye_glow"
+            },
+            "example": {
+              "zh": "白金色",
+              "en": "platinum gold"
+            }
+          },
+          {
+            "name": {
+              "zh": "头盔特征",
+              "en": "helmet_feature"
+            },
+            "example": {
+              "zh": "长出触角",
+              "en": "horns"
+            }
+          },
+          {
+            "name": {
+              "zh": "战衣配色",
+              "en": "armor_color"
+            },
+            "example": {
+              "zh": "黑红配色",
+              "en": "black-and-red"
+            }
+          },
+          {
+            "name": {
+              "zh": "场景",
+              "en": "scene"
+            },
+            "example": {
+              "zh": "末日战场荒野",
+              "en": "post-apocalyptic battlefield wasteland"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "anime-to-real",
       "category": "action",
       "name": {
-        "zh": "动漫转真人",
-        "en": "Anime to Live-action"
+        "zh": "动漫 / 2D → 真人实拍",
+        "en": "Anime / 2D → Live-Action Real"
       },
       "description": {
-        "zh": "把 2D 角色还原成真人实拍质感",
-        "en": "Turn a 2D character into live action"
+        "zh": "一个风格化的「驭风剑客」概念，渲染成真实世界里的真人。只描述特征，绝不写 IP 名字。",
+        "en": "a stylised \"wind swordsman\" concept rendered as a real person in a real world. Describe traits, never an IP name."
       },
       "palette": {
         "background": "0B1220",
@@ -618,18 +2292,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/anime-to-real.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一个风格化的「驭风剑客」概念，渲染成真实世界里的真人。只描述特征，绝不写 IP 名字。",
+          "en": "a stylised \"wind swordsman\" concept rendered as a real person in a real world. Describe traits, never an IP name."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "细节（用特写卖出真实感）",
+              "en": "Detail (sell the realism in close-up)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "剪影（这下认出 ta 了）",
+              "en": "The silhouette (now we recognise them)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "一个停住的眼神（克制特写）",
+              "en": "A held look (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "silhouette",
+              "en": "silhouette"
+            },
+            "example": {
+              "zh": "高挑、清瘦、长外套、单侧护肩",
+              "en": "tall, lean, long coat, single shoulder guard"
+            }
+          },
+          {
+            "name": {
+              "zh": "signature",
+              "en": "signature"
+            },
+            "example": {
+              "zh": "一缕淡蓝挑染、一块缺角的玉坠",
+              "en": "a streak of pale-blue hair, a chipped jade pendant"
+            }
+          },
+          {
+            "name": {
+              "zh": "palette",
+              "en": "palette"
+            },
+            "example": {
+              "zh": "靛蓝 + 旧钢色 + 浅蓝",
+              "en": "indigo + worn steel + pale blue"
+            }
+          },
+          {
+            "name": {
+              "zh": "world",
+              "en": "world"
+            },
+            "example": {
+              "zh": "黄昏时分一座被雨打湿的石桥",
+              "en": "a rain-wet stone bridge at dusk"
+            }
+          },
+          {
+            "name": {
+              "zh": "prop",
+              "en": "prop"
+            },
+            "example": {
+              "zh": "一把磨旧的真钢曲刃刀",
+              "en": "a worn, real-steel curved blade"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "cyberpunk-city",
       "category": "action",
       "name": {
-        "zh": "赛博朋克城市",
-        "en": "Cyberpunk City"
+        "zh": "赛博朋克城市漫游（氛围向，以环境为主角)",
+        "en": "Cyberpunk City Roam (atmospheric, environment-led)"
       },
       "description": {
-        "zh": "霓虹雨夜，以环境为主角的城市漫游",
-        "en": "Neon, rain and the city as the protagonist"
+        "zh": "在一座被雨水浸透的霓虹巨城里，缓慢夜游，一个孤身人影最终消融进人群。换掉城市的味道，保留氛围的纪律。",
+        "en": "a slow night roam through a rain-soaked neon megacity, one lone figure dissolving into the crowd. Swap the city's flavour, keep the atmosphere discipline."
       },
       "palette": {
         "background": "0B1220",
@@ -648,18 +2420,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/cyberpunk-city.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "在一座被雨水浸透的霓虹巨城里，缓慢夜游，一个孤身人影最终消融进人群。换掉城市的味道，保留氛围的纪律。",
+          "en": "a slow night roam through a rain-soaked neon megacity, one lone figure dissolving into the crowd. Swap the city's flavour, keep the atmosphere discipline."
+        },
+        "storyboard": {
+          "zh": "逐秒，约 10s 单镜漫游",
+          "en": "per-second, ~10s single roam"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "进入",
+              "en": "Enter"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "穿行",
+              "en": "Through"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "消融",
+              "en": "Dissolve"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "city_flavour",
+              "en": "city_flavour"
+            },
+            "example": {
+              "zh": "密集的东亚霓虹街边市集",
+              "en": "dense East-Asian neon street market"
+            }
+          },
+          {
+            "name": {
+              "zh": "weather",
+              "en": "weather"
+            },
+            "example": {
+              "zh": "持续的冷雨、体积感薄雾",
+              "en": "steady cold rain, volumetric haze"
+            }
+          },
+          {
+            "name": {
+              "zh": "neon_palette",
+              "en": "neon_palette"
+            },
+            "example": {
+              "zh": "品红 + 青，压在墨绿底色上",
+              "en": "magenta + cyan over teal base"
+            }
+          },
+          {
+            "name": {
+              "zh": "figure",
+              "en": "figure"
+            },
+            "example": {
+              "zh": "一个孤身戴兜帽的人影",
+              "en": "a lone hooded figure"
+            }
+          },
+          {
+            "name": {
+              "zh": "move",
+              "en": "move"
+            },
+            "example": {
+              "zh": "沿街缓慢前推的轨道镜头",
+              "en": "slow forward dolly down the street"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "sci-fi-space",
       "category": "action",
       "name": {
-        "zh": "硬科幻太空",
-        "en": "Hard Sci-fi Space"
+        "zh": "硬科幻太空 / 失重",
+        "en": "Hard Sci-Fi Space / Zero-G"
       },
       "description": {
-        "zh": "失重、宇宙尺度与真实磨损感",
-        "en": "Zero-G, cosmic scale and worn hardware"
+        "zh": "一名宇航员系着安全绳，飘在空间站外，地球就在脚下。换掉场景，留住物理与静默。",
+        "en": "an astronaut on a tether drifting outside a station, Earth below. Swap the scenario, keep the physics and the silence."
       },
       "palette": {
         "background": "0B1220",
@@ -678,18 +2548,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sci-fi-space.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一名宇航员系着安全绳，飘在空间站外，地球就在脚下。换掉场景，留住物理与静默。",
+          "en": "an astronaut on a tether drifting outside a station, Earth below. Swap the scenario, keep the physics and the silence."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "飘移（建立尺度 + 失重感）",
+              "en": "Drift (establish scale + weightlessness)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–7s",
+              "en": "3–7s"
+            },
+            "title": {
+              "zh": "那一刻（{{action}}）",
+              "en": "The moment ({{action}})"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "静止（克制收尾）",
+              "en": "Stillness (restrained close)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "subject",
+              "en": "subject"
+            },
+            "example": {
+              "zh": "一名系着安全绳的宇航员",
+              "en": "an astronaut on a tether"
+            }
+          },
+          {
+            "name": {
+              "zh": "action",
+              "en": "action"
+            },
+            "example": {
+              "zh": "飘移、伸手去够扶手",
+              "en": "drifting, reaching for a handrail"
+            }
+          },
+          {
+            "name": {
+              "zh": "vista",
+              "en": "vista"
+            },
+            "example": {
+              "zh": "脚下地球的弧线与晨昏分界线",
+              "en": "Earth's curve and the terminator line below"
+            }
+          },
+          {
+            "name": {
+              "zh": "wear",
+              "en": "wear"
+            },
+            "example": {
+              "zh": "磨花的宇航服、刮痕斑斑的面罩反光",
+              "en": "scuffed suit, scratched visor reflections"
+            }
+          },
+          {
+            "name": {
+              "zh": "light",
+              "en": "light"
+            },
+            "example": {
+              "zh": "强烈的低角度阳光、深黑阴影",
+              "en": "hard low sun, deep black shadow"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "sports-slowmo",
       "category": "action",
       "name": {
-        "zh": "运动慢动作",
-        "en": "Sports Slow-mo"
+        "zh": "高速摄影慢动作运动",
+        "en": "High-Speed Slow-Motion Sports"
       },
       "description": {
-        "zh": "高速摄影定格运动的决定性瞬间",
-        "en": "High-speed capture of the decisive moment"
+        "zh": "一名短跑选手从起跑器上爆发，把那个决定性的蹬地瞬间冻结成极慢动作。换个项目，保留这套方法纪律。",
+        "en": "a sprinter exploding off the blocks, the decisive push frozen in extreme slow motion. Swap the sport, keep the discipline."
       },
       "palette": {
         "background": "0B1220",
@@ -708,18 +2676,116 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sports-slowmo.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一名短跑选手从起跑器上爆发，把那个决定性的蹬地瞬间冻结成极慢动作。换个项目，保留这套方法纪律。",
+          "en": "a sprinter exploding off the blocks, the decisive push frozen in extreme slow motion. Swap the sport, keep the discipline."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 10s",
+          "en": "3 beats, ~10s"
+        },
+        "duration": {
+          "zh": "10s",
+          "en": "10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–2s",
+              "en": "0–2s"
+            },
+            "title": {
+              "zh": "蓄势（实时，张力）",
+              "en": "Coiled (real-time, tension)"
+            }
+          },
+          {
+            "time": {
+              "zh": "2–7s",
+              "en": "2–7s"
+            },
+            "title": {
+              "zh": "决定性瞬间（极慢动作——回报所在）",
+              "en": "The decisive moment (extreme slow motion — the payoff)"
+            }
+          },
+          {
+            "time": {
+              "zh": "7–10s",
+              "en": "7–10s"
+            },
+            "title": {
+              "zh": "释放（缓出）",
+              "en": "Release (ease out)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "athlete",
+              "en": "athlete"
+            },
+            "example": {
+              "zh": "起跑器上的短跑选手",
+              "en": "a sprinter at the blocks"
+            }
+          },
+          {
+            "name": {
+              "zh": "moment",
+              "en": "moment"
+            },
+            "example": {
+              "zh": "起跑器上爆发的第一蹬",
+              "en": "the explosive first push off the blocks"
+            }
+          },
+          {
+            "name": {
+              "zh": "detail",
+              "en": "detail"
+            },
+            "example": {
+              "zh": "汗珠从眉梢甩出、肌肉紧绷",
+              "en": "sweat flicking off the brow, muscles taut"
+            }
+          },
+          {
+            "name": {
+              "zh": "venue",
+              "en": "venue"
+            },
+            "example": {
+              "zh": "黄昏泛光灯下的体育场跑道",
+              "en": "a stadium track at dusk under floodlights"
+            }
+          },
+          {
+            "name": {
+              "zh": "palette",
+              "en": "palette"
+            },
+            "example": {
+              "zh": "冷白泛光灯 + 暖肤色",
+              "en": "cool floodlight white + warm skin"
+            }
+          }
+        ]
+      }
     },
     {
       "id": "claymation",
       "category": "stylized",
       "name": {
-        "zh": "黏土定格动画",
-        "en": "Claymation"
+        "zh": "定格动画 / 黏土动画（风格驱动）",
+        "en": "Stop-Motion / Claymation (style-driven)"
       },
       "description": {
-        "zh": "材质和布光驱动的定格动画风格",
-        "en": "Material- and light-driven stop motion"
+        "zh": "一只黏土小生物踮着脚走过一个手作布景。换掉角色和布景，保留12fps 步进的纪律即可。",
+        "en": "a small clay creature tiptoes across a handmade set. Swap the character and set, keep the 12fps stepped discipline."
       },
       "palette": {
         "background": "EBFBEE",
@@ -738,7 +2804,105 @@
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/claymation.zh.md"
       },
       "cover": true,
-      "aspect": "16:9"
+      "aspect": "16:9",
+      "details": {
+        "concept": {
+          "zh": "一只黏土小生物踮着脚走过一个手作布景。换掉角色和布景，保留12fps 步进的纪律即可。",
+          "en": "a small clay creature tiptoes across a handmade set. Swap the character and set, keep the 12fps stepped discipline."
+        },
+        "storyboard": {
+          "zh": "3 拍，约 8–10 秒",
+          "en": "3 beats, ~8–10s"
+        },
+        "duration": {
+          "zh": "8–10 秒",
+          "en": "8–10s"
+        },
+        "beats": [
+          {
+            "time": {
+              "zh": "0–3s",
+              "en": "0–3s"
+            },
+            "title": {
+              "zh": "登场（步进）",
+              "en": "Enter (stepped)"
+            }
+          },
+          {
+            "time": {
+              "zh": "3–6s",
+              "en": "3–6s"
+            },
+            "title": {
+              "zh": "节拍（那个小瞬间）",
+              "en": "Beat (the little moment)"
+            }
+          },
+          {
+            "time": {
+              "zh": "6–10s",
+              "en": "6–10s"
+            },
+            "title": {
+              "zh": "收住（克制）",
+              "en": "Settle (restrained)"
+            }
+          }
+        ],
+        "variables": [
+          {
+            "name": {
+              "zh": "character",
+              "en": "character"
+            },
+            "example": {
+              "zh": "一只圆肚子的黏土小生物",
+              "en": "a round-bellied clay creature"
+            }
+          },
+          {
+            "name": {
+              "zh": "set",
+              "en": "set"
+            },
+            "example": {
+              "zh": "一片微缩的长苔藓的林地",
+              "en": "a miniature mossy forest floor"
+            }
+          },
+          {
+            "name": {
+              "zh": "action",
+              "en": "action"
+            },
+            "example": {
+              "zh": "踮脚走过，然后受惊僵住",
+              "en": "tiptoes across, then freezes, startled"
+            }
+          },
+          {
+            "name": {
+              "zh": "material",
+              "en": "material"
+            },
+            "example": {
+              "zh": "哑光橡皮泥，能看见指纹",
+              "en": "matte plasticine with visible fingerprints"
+            }
+          },
+          {
+            "name": {
+              "zh": "lighting",
+              "en": "lighting"
+            },
+            "example": {
+              "zh": "暖色实用台灯，柔和阴影",
+              "en": "warm practical desk lamp, soft shadow"
+            }
+          }
+        ]
+      }
     }
   ]
 }

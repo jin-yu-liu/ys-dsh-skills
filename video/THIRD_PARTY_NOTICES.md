@@ -4,4 +4,4 @@
 
 未复制上游 `prompts/` 目录中版权归 Mx-Shell 等原作者所有的完整提示词原文。模板文件中的延伸阅读链接与署名保持原样。
 
-模板选择器的中英文名称与简介由 DSH 改写。上游没有示意图，`previews/` 中的封面由 `scripts/render-video-covers.py` 用 Pillow 绘制（不含第三方图片、字体或表情图），随本仓库许可发布。
+模板选择器的名称、概念、分镜节拍、变量与时长均由 `scripts/video-details.mjs` 原样摘自模板正文。上游没有示意图，`previews/` 中的封面由 `scripts/render-video-covers.py` 用 Pillow 绘制（不含第三方图片、字体或表情图），随本仓库许可发布。

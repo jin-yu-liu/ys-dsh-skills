@@ -21,6 +21,7 @@
 import { spawnSync } from 'node:child_process'
 import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
+import { videoDetails } from './video-details.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const arg = (name) => {
@@ -252,35 +253,6 @@ const VIDEO_PALETTES = {
   action: { background: '0B1220', accent: '22D3EE', text: 'E2E8F0' },
   stylized: { background: 'EBFBEE', accent: '2F9E44', text: '173D21' },
 }
-/**
- * Chooser copy. Upstream titles carry a "实战范例 —" prefix and descriptions open with
- * license boilerplate, so the chooser uses this reviewed copy. Every imported genre must be listed.
- */
-const VIDEO_DISPLAY = {
-  'family-recipe-farewell': ['妈妈的菜谱', "A Mother's Recipe", '亲情叙事：一张手写菜谱在母女两代间传下去', 'Family story: a handwritten recipe passed down'],
-  'found-footage-horror': ['监控录像恐怖', 'Found-footage Horror', '劣质监控画面里的异常一瞬，伪纪录恐怖', 'Something wrong caught on a cheap security camera'],
-  'micro-drama': ['竖屏短剧', 'Vertical Micro-drama', '冷开钩子 + 正反打对峙 + 悬念结尾', 'Cold-open hook, shot-reverse-shot clash, cliffhanger'],
-  'movie-trailer': ['电影预告片', 'Teaser Trailer', '层层升级的多镜蒙太奇，收在片名', 'Escalating multi-shot montage ending on the title'],
-  'car-commercial': ['汽车广告', 'Car Commercial', '路面、光扫和车身细节驱动的汽车大片', 'Road, light sweeps and body details sell the car'],
-  'product-commercial': ['产品硬广', 'Product Hero Ad', '按节拍切的产品主视觉广告', 'Beat-driven hero shots of one product'],
-  'animal-vlog': ['会说话的动物 Vlog', 'Talking Animal Vlog', '萌宠自拍视角讲段子', 'A pet films itself and delivers a punchline'],
-  'elderly-cat-companion': ['奶奶与猫', 'Grandmother & Cat', '留下来的那只猫，安静的陪伴叙事', 'A quiet story of the cat that stayed'],
-  'pet-lifetime-narrative': ['萌宠一生的陪伴', 'A Pet’s Lifetime', '跨越一生的萌宠与家人的情感短片', 'A pet and a family across a lifetime'],
-  'food-asmr': ['美食 ASMR', 'Food ASMR', '声音和质感驱动的美食特写', 'Sound- and texture-led food close-ups'],
-  'drone-fpv': ['无人机 FPV', 'Drone / FPV', '穿越缝隙、最后揭示全景的航拍', 'Fly through a gap, then reveal the vista'],
-  'nature-timelapse': ['风光延时', 'Nature Timelapse', '光线和天色随时间流动的风光延时', 'Light and sky moving over a landscape'],
-  'travel-vlog': ['旅行 Vlog', 'Travel Vlog', '大景、细节、人物拼出在地感', 'Wides, details and people build a sense of place'],
-  'dance': ['舞蹈短片', 'Dance Film', '为编舞服务的运镜和空间', 'Camera and space in service of choreography'],
-  'music-video': ['音乐 MV', 'Music Video', '按节拍卡点剪辑的表演 MV', 'Beat-synced performance cuts'],
-  'fashion-film': ['时尚大片', 'Fashion Film', '面料动态与布光主导的 Look Book', 'Fabric motion and light lead the look book'],
-  '15s-transformation': ['15 秒变身', '15s Transformation', '一镜到底的变身特效，去 IP 通用骨架', 'One-take transformation, IP-free skeleton'],
-  'anime-to-real': ['动漫转真人', 'Anime to Live-action', '把 2D 角色还原成真人实拍质感', 'Turn a 2D character into live action'],
-  'cyberpunk-city': ['赛博朋克城市', 'Cyberpunk City', '霓虹雨夜，以环境为主角的城市漫游', 'Neon, rain and the city as the protagonist'],
-  'sci-fi-space': ['硬科幻太空', 'Hard Sci-fi Space', '失重、宇宙尺度与真实磨损感', 'Zero-G, cosmic scale and worn hardware'],
-  'sports-slowmo': ['运动慢动作', 'Sports Slow-mo', '高速摄影定格运动的决定性瞬间', 'High-speed capture of the decisive moment'],
-  'claymation': ['黏土定格动画', 'Claymation', '材质和布光驱动的定格动画风格', 'Material- and light-driven stop motion'],
-}
-
 function importVideo() {
   const source = resolve(videoSource)
   const index = readJson(join(source, 'templates/index.json'))
@@ -318,14 +290,15 @@ function importVideo() {
     if (zh.kind !== 'genre') continue
     const category = categoryOf.get(zh.category)
     if (category === undefined) throw new Error(`未知分类 ${zh.category}（${id}）`)
-    const display = VIDEO_DISPLAY[id]
-    if (display === undefined) throw new Error(`VIDEO_DISPLAY 缺少 ${id} 的展示文案`)
     for (const [name, from] of files) cpSync(join(source, from), join(templateDir, name))
+    // Chooser copy is quoted from the template files themselves (scripts/video-details.mjs).
+    const { name, description, details } = videoDetails(templateDir, id)
     templates.push({
       id,
       category,
-      name: { zh: display[0], en: display[1] },
-      description: { zh: display[2], en: display[3] },
+      name,
+      description,
+      details,
       palette: VIDEO_PALETTES[category],
       variables: (zh.variables ?? []).map(v => v.name),
       source: { license: 'MIT', url: `${repository}/blob/main/templates/${id}.zh.md` },
@@ -353,7 +326,7 @@ function importVideo() {
     '',
     '未复制上游 `prompts/` 目录中版权归 Mx-Shell 等原作者所有的完整提示词原文。模板文件中的延伸阅读链接与署名保持原样。',
     '',
-    '模板选择器的中英文名称与简介由 DSH 改写。上游没有示意图，`previews/` 中的封面由 `scripts/render-video-covers.py` 用 Pillow 绘制（不含第三方图片、字体或表情图），随本仓库许可发布。',
+    '模板选择器的名称、概念、分镜节拍、变量与时长均由 `scripts/video-details.mjs` 原样摘自模板正文。上游没有示意图，`previews/` 中的封面由 `scripts/render-video-covers.py` 用 Pillow 绘制（不含第三方图片、字体或表情图），随本仓库许可发布。',
     '',
   ].join('\n'))
   // Covers are drawn locally (no upstream stills); re-render them so the catalog marks them again.

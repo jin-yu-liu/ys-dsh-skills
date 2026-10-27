@@ -70,7 +70,7 @@ compatibility: DSH >= 0.2.1
 
 ## 生图 / 生视频模板收录规则
 
-- 选择器目录：`image/catalog.json`、`video/catalog.json`，字段 `format`、`source`、`defaultTemplateId`、`categories[{id,name}]`、`templates[{id,category,name,description,cover?,aspect?,palette?,variables?,source?}]`；`freeform`（自由创作）是内置项，没有模板文件。
+- 选择器目录：`image/catalog.json`、`video/catalog.json`，字段 `format`、`source`、`defaultTemplateId`、`categories[{id,name}]`、`templates[{id,category,name,description,cover?,aspect?,palette?,variables?,details?,source?}]（视频模板的 `details` 由 `scripts/video-details.mjs` 摘自模板正文）`；`freeform`（自由创作）是内置项，没有模板文件。
 - 模板正文：生图 `skills/dsh-image/assets/templates/<id>.md`，视频 `skills/dsh-video/assets/templates/<id>.zh.md` 与 `<id>.md`；有 `cover: true` 的模板必须有 `image/previews/<id>.jpg` / `video/previews/<id>.jpg`；新增视频题材时在 `scripts/render-video-covers.py` 里补一个画法后重新运行。新模板还要加进对应 SKILL.md 的模板表（`npm run validate` 会检查）。
 - 从上游同步：`node scripts/import-media-templates.mjs --image <awesome-gpt-image-2 目录> --video <ai-shortfilm-prompts 目录>`（封面缩放需要 Pillow）。脚本重写模板、目录、许可证和 `THIRD_PARTY_NOTICES.md`，不改两个 SKILL.md；视频模板的中文名称与简介在脚本的 `VIDEO_DISPLAY` 中维护。
 
