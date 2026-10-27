@@ -10,7 +10,8 @@
  *   case becomes image/previews/<id>.jpg.
  * - ai-shortfilm-prompts (jnMetaCode, MIT for templates/): every `genre`
  *   template (zh + en) is copied to skills/dsh-video/assets/templates/, every
- *   `module` to skills/dsh-video/references/modules/.
+ *   `module` to skills/dsh-video/references/modules/; covers are drawn by
+ *   scripts/render-video-covers.py into video/previews/<id>.jpg.
  * - image/catalog.json and video/catalog.json are what the DSH plugin's
  *   template chooser reads; both start with a built-in "free form" entry.
  *
@@ -352,9 +353,12 @@ function importVideo() {
     '',
     '未复制上游 `prompts/` 目录中版权归 Mx-Shell 等原作者所有的完整提示词原文。模板文件中的延伸阅读链接与署名保持原样。',
     '',
-    '模板选择器的中英文名称与简介由 DSH 改写；视频模板没有封面图，选择器使用分类色块卡片。',
+    '模板选择器的中英文名称与简介由 DSH 改写。上游没有示意图，`previews/` 中的封面由 `scripts/render-video-covers.py` 用 Pillow 绘制（不含第三方图片、字体或表情图），随本仓库许可发布。',
     '',
   ].join('\n'))
+  // Covers are drawn locally (no upstream stills); re-render them so the catalog marks them again.
+  const covers = spawnSync(python, ['-E', join(root, 'scripts/render-video-covers.py')], { stdio: 'inherit' })
+  if (covers.status !== 0) throw new Error('视频封面绘制失败（需要 Pillow）')
   return { templates: templates.length - 1, modules: modules.length }
 }
 

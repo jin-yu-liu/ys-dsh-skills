@@ -115,7 +115,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/family-recipe-farewell.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "found-footage-horror",
@@ -143,7 +145,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/found-footage-horror.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "micro-drama",
@@ -171,7 +175,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/micro-drama.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "movie-trailer",
@@ -199,7 +205,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/movie-trailer.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "car-commercial",
@@ -227,7 +235,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/car-commercial.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "product-commercial",
@@ -255,7 +265,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/product-commercial.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "animal-vlog",
@@ -283,7 +295,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/animal-vlog.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "elderly-cat-companion",
@@ -305,7 +319,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/elderly-cat-companion.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "pet-lifetime-narrative",
@@ -327,7 +343,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/pet-lifetime-narrative.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "food-asmr",
@@ -355,7 +373,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/food-asmr.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "drone-fpv",
@@ -383,7 +403,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/drone-fpv.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "nature-timelapse",
@@ -411,7 +433,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/nature-timelapse.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "travel-vlog",
@@ -439,7 +463,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/travel-vlog.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "dance",
@@ -467,7 +493,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/dance.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "music-video",
@@ -495,7 +523,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/music-video.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "fashion-film",
@@ -523,7 +553,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/fashion-film.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "15s-transformation",
@@ -554,7 +586,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/15s-transformation.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "anime-to-real",
@@ -582,7 +616,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/anime-to-real.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "cyberpunk-city",
@@ -610,7 +646,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/cyberpunk-city.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "sci-fi-space",
@@ -638,7 +676,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sci-fi-space.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "sports-slowmo",
@@ -666,7 +706,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/sports-slowmo.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     },
     {
       "id": "claymation",
@@ -694,7 +736,9 @@
       "source": {
         "license": "MIT",
         "url": "https://github.com/jnMetaCode/ai-shortfilm-prompts/blob/main/templates/claymation.zh.md"
-      }
+      },
+      "cover": true,
+      "aspect": "16:9"
     }
   ]
 }

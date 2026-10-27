@@ -50,7 +50,7 @@ for (const item of ppt.templates ?? []) {
 // AI 生图 / 生视频模板：目录、技能内模板文件、封面一一对应，SKILL.md 的模板表与目录一致。
 const MEDIA = {
   image: { skill: 'skills/dsh-image', files: id => [`assets/templates/${id}.md`], cover: true },
-  video: { skill: 'skills/dsh-video', files: id => [`assets/templates/${id}.zh.md`, `assets/templates/${id}.md`], cover: false },
+  video: { skill: 'skills/dsh-video', files: id => [`assets/templates/${id}.zh.md`, `assets/templates/${id}.md`], cover: true },
 }
 const mediaCounts = {}
 for (const [kind, spec] of Object.entries(MEDIA)) {
@@ -68,6 +68,7 @@ for (const [kind, spec] of Object.entries(MEDIA)) {
     if (typeof item.name?.zh !== 'string' || typeof item.name?.en !== 'string') fail(`${kind}/${item.id}: 缺少中英文名称`)
     if (item.id === 'freeform') continue
     for (const file of spec.files(item.id)) if (!existsSync(resolve(root, spec.skill, file))) fail(`${kind}/${item.id}: 缺少 ${spec.skill}/${file}`)
+    if (spec.cover && item.cover !== true) fail(`${kind}/${item.id}: catalog 未标记 cover`)
     if (spec.cover && !existsSync(resolve(root, kind, 'previews', `${item.id}.jpg`))) fail(`${kind}/${item.id}: 缺少封面 ${kind}/previews/${item.id}.jpg`)
     if (!skillText.includes(`\`${item.id}\``)) fail(`${kind}/${item.id}: ${spec.skill}/SKILL.md 的模板表没有列出该模板`)
   }
