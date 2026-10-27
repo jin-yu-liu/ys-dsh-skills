@@ -3,16 +3,16 @@ name: dsh-video
 description: 用跃数AI站点的视频模型生成短视频：按 22 套题材模板（短剧、预告片、产品 / 汽车广告、萌宠、美食 ASMR、旅行、航拍、MV、舞蹈、时尚、科幻、慢动作、黏土动画等）和 5 段式结构写出多镜头视频提示词，调用生视频工具（文生视频、参考图 / 首尾帧生视频）并保存到工作区。当用户要做短视频、广告片、分镜视频、让图片动起来，或在首页选择了 AI 生视频模板时使用。
 compatibility: DSH >= 0.2.1；需要 dsh-leap 插件提供的 leap_media_models、leap_video_generate、leap_media_task、leap_media_template 工具，并已登录跃数AI账号（试用模式不能生视频）。
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # AI 生视频
 
-出片走 dsh-leap 插件的工具，它们用本设备自动注册的「生视频」密钥调用站点的 OpenAI 兼容接口，结果保存在工作区：
+出片走 dsh-leap 插件的工具。它们用本设备自动注册的「生图/视频」密钥（一把密钥可用站内全部公开的图像和视频模型）调用站点的 OpenAI 兼容接口，结果保存在工作区：
 
 | 工具 | 用途 |
 |---|---|
-| `leap_media_models` | 列出可用模型（`kind: "video"`），含支持的时长、尺寸、参考图数量等参数说明 |
+| `leap_media_models` | 列出可用模型（`kind: "video"`），含单价、支持的时长、尺寸、参考图数量等参数说明 |
 | `leap_video_generate` | 提交生视频，等待完成并下载 mp4；超时返回 `task_id` |
 | `leap_media_task` | 查询未完成的任务，完成后下载；不会重复扣费 |
 | `leap_media_template` | 读取题材模板（`template_id`）或构件（`module`）全文，`lang` 选中英文 |
@@ -60,15 +60,15 @@ metadata:
 
 ## 4. 出片
 
-1. 第一次生成前调用 `leap_media_models`（`kind: "video"`），按 `default_parameters` / `parameter_schema` 选模型和可用的时长、尺寸；用户没指定时用列表第一个并说明。
+1. 选模型：消息里的通知写了「生成模型」（用户在首页面板选的）就用它，除非用户在消息中指定了别的模型；没有时用列表第一个并说明模型和单价。无论哪种，第一次生成前都调用 `leap_media_models`（`kind: "video"`），按该模型的 `default_parameters` / `parameter_schema` 确定可用的时长和尺寸。
 2. 调用 `leap_video_generate`：
    - `prompt`：第 3 步的完整提示词。
    - `seconds`、`size`（如横屏 `1280x720`、竖屏 `720x1280`），模型支持时可加 `resolution`（如 `720p`）、`ratio`（如 `9:16`）。
    - 图生视频：`first_frame` / `last_frame` 放首尾帧图片路径；角色或产品参考图放 `reference_images`。合计最多 9 张，png/jpg/webp，每张 ≤ 12MB。需要先做关键帧时可以先用 dsh-image 技能出图，再把结果当首帧。
    - `output_dir` 默认 `outputs/videos`；`file_prefix` 用简短描述。
 3. 结果处理：
-   - `completed`：告诉用户 `files` 里的 mp4 路径。
-   - `in_progress`：告诉用户还在生成和当前进度，稍后用 `leap_media_task`（`kind: "video"`，同一个 `task_id`）继续取，**不要重新提交**。
+   - `completed`：**把工具结果里的 `markdown` 原样放进给用户的回复**（视频文件链接加工作区路径），再说明模型、时长和保存位置。对话里不能内嵌播放器，用户点链接或打开文件观看；不要省略这段 Markdown。
+   - `in_progress`：告诉用户还在生成和当前进度，稍后用 `leap_media_task`（`kind: "video"`，同一个 `task_id`）继续取，**不要重新提交**；取到后同样附上 `markdown`。
    - `failed`：转述原因；内容审核类失败先修改提示词中的敏感描述，再问用户是否重试。
 
 ## 5. 多镜头成片

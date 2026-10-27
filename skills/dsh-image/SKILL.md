@@ -3,16 +3,16 @@ name: dsh-image
 description: 用跃数AI站点的图像模型生成图片：按 22 套工业级提示词模板（UI、信息图、海报、电商、品牌、建筑、写实摄影、插画、角色、场景、古风、文档等）把需求写成完整提示词，调用生图工具出图并保存到工作区。当用户要生成图片、海报、配图、封面、插画、产品图、改图（图生图），或在首页选择了 AI 生图模板时使用。
 compatibility: DSH >= 0.2.1；需要 dsh-leap 插件提供的 leap_media_models、leap_image_generate、leap_media_task、leap_media_template 工具，并已登录跃数AI账号（试用模式不能生图）。
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # AI 生图
 
-出图走 dsh-leap 插件的工具，它们用本设备自动注册的「生图」密钥调用站点的 OpenAI 兼容接口，结果保存在工作区：
+出图走 dsh-leap 插件的工具。它们用本设备自动注册的「生图/视频」密钥（一把密钥可用站内全部公开的图像和视频模型）调用站点的 OpenAI 兼容接口，结果保存在工作区：
 
 | 工具 | 用途 |
 |---|---|
-| `leap_media_models` | 列出可用模型（`kind: "image"`），含默认参数和参数说明 |
+| `leap_media_models` | 列出可用模型（`kind: "image"`），含单价、默认参数和参数说明 |
 | `leap_image_generate` | 提交生图（有 `reference_images` 时为图生图），等待完成并下载 |
 | `leap_media_task` | 查询等待超时的任务，完成后下载；不会重复扣费 |
 | `leap_media_template` | 读取一套模板的全文（`kind: "image"`, `template_id`） |
@@ -63,14 +63,17 @@ metadata:
 
 ## 4. 出图
 
-1. 第一次生成前调用 `leap_media_models`（`kind: "image"`），按用户要求或默认参数选 `model`；用户没指定时用列表第一个，并在回复里说明。
+1. 选模型：
+   - 消息里的通知写了「生成模型」（用户在首页面板选的）就用它，除非用户在消息中指定了别的模型。
+   - 没有时调用 `leap_media_models`（`kind: "image"`），按用户要求选；用户没指定就用列表第一个，并在回复里说明模型和单价。
 2. 调用 `leap_image_generate`：
    - `prompt`：第 3 步的完整提示词。
    - `size`：横版 `1536x1024`、竖版 `1024x1536`、方图 `1024x1024`，或 `auto`；以模型的 `parameter_schema` 为准。
    - `n`：默认 1。生成多张或多轮之前先和用户确认——**每张都会扣余额**。
    - 改图 / 图生图：把工作区里的图片路径放进 `reference_images`（最多 4 张，png/jpg/webp，每张 ≤ 12MB），提示词写清楚保留什么、改什么。
    - `output_dir` 默认 `outputs/images`；`file_prefix` 用简短的英文或拼音描述，例如 `poster-spring-sale`。
-3. 返回 `status: completed` 时，把 `files` 里的路径告诉用户；返回 `in_progress` 时说明还在生成，稍后用 `leap_media_task`（`kind: "image"`，同一个 `task_id`）取结果，**不要重新提交**。
+3. 返回 `status: completed` 时，**把工具结果里的 `markdown` 原样放进给用户的回复**（形如 `![文件名](/绝对路径/outputs/images/xxx.png)`），图片会直接显示在对话里；再用一两句话说明用的模型、张数和保存位置。不要改写或省略这段 Markdown，也不要把图片换成纯文字描述。
+   - 返回 `in_progress` 时说明还在生成，稍后用 `leap_media_task`（`kind: "image"`，同一个 `task_id`）取结果，**不要重新提交**；取到后同样附上 `markdown`。
 4. `failed` 时转述原因。内容审核类失败要调整提示词里的敏感描述后再问用户是否重试。
 
 ## 5. 迭代
